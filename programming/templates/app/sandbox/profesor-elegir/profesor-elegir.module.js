@@ -1,0 +1,3 @@
+angular.module('profesorElegir', [
+  'ngRoute'
+])

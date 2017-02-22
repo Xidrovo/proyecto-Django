@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Dependencias css-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="public/css/index.css">
+	<link rel="stylesheet" type="text/css" href="public/css/custom-navbar.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<!---->
+	<title>Fundamentos de programación</title>
+</head>
+<body id="index-body">
+		<header>		
+			<nav class="navbar navbar-default navbar-static-top">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+			      </button>
+			      <a class="navbar-brand" href="#">ESPOL</a>
+			    </div>
+			    <div class="collapse navbar-collapse myNavbar" id="myNavbar">
+			      <ul class="nav navbar-nav">
+			        <li class="espol"><a href="index.html">Inicio</a></li>
+			        <li class="espol"><a href="app/curso/curso.html">El Curso</a></li>
+			        <li class="espol"><a href="app/semanal/semanal.html">Semana a Semana</a></li>
+			        <li class="espol"><a href="app/equipo/equipo.html">Equipo</a></li>
+			        <li class="espol"><a href="app/ayudantias/ayudantias.html">Ayudantías</a></li>
+			        <li class="espol"><a href="#">Sandbox</a></li>
+			      </ul>
+			      <ul class="nav navbar-nav navbar-right">
+			        <li>
+			        	<button class="btn btn-info"  data-toggle="modal" data-target="#myModal">
+						    <img src="public/media/img/no-Avatar.jpg" id="login" />
+						</button>
+						
+			        </li>
+			      </ul>
+			    <!--Modal para el PopUP de login-->
+						<div class="modal fade" id="myModal" role="dialog">
+						    <div class="modal-dialog">
+						    
+							      <!-- Modal content-->
+							    <div class="modal-content">
+							    	<div class="modal-header">
+							        	<button type="button" class="close" data-dismiss="modal"></button>
+							        	<h3 class="modal-title words">Login</h3>
+							    	</div>
+							    	<div class="modal-body">
+							    		<form>
+										    <div class="form-group">
+										      <label for="usr" class="words">Usuario:</label>
+										      <input type="text" class="form-control" id="usr">
+										    </div>
+										    <div class="form-group">
+										      <label for="pwd" class="words">Contraseña:</label>
+										      <input type="password" class="form-control" id="pwd">
+										    </div>
+										    <div class="checkbox">
+												<label><input type="checkbox" value="" class="words">No cerrar sesión</label>
+											</div>
+										  </form>
+							    	</div>
+							    	<div class="modal-footer">
+							    		<button type="button" class="btn btn-default inline pull-left" id="entrar">Entrar</button>
+							    		<button type="button" class="btn btn-default inline pull-right" data-dismiss="modal">Close</button>
+							    		<hr class="clearer">
+							    		<a href="#" class="words"><h6>Crear una cuenta</h6></a>
+							    		<a href="app/misc/forgotPass.html" class="words"><h6>¿Olvidaste tu contraseña?</h6></a>
+							    	</div>
+								</div>
+						      
+							</div>
+						</div>
+  						<!--Fin de la creación del modal-->
+			    </div>
+			  </div>
+			</nav>
+		</header>
+<div class="container">  
+		<section>
+			<div class="container container-small">
+				<article>
+
+						<h1 id="ask">Todo lo que necesitas para tener éxito en fundamentos de programación</h1>
+						<hr>
+						<blockquote>
+							<h3 class="text-center" id="frase">Si la depuración es el proceso de eliminar errores, entonces la programación debe ser el proceso de introducirlos"~Edsger Dijkstra</h3>
+						</blockquote>
+						<br><br>
+						<button type="button" class="btn btn-primary btn-md center-block custom-class" id="begin"><p>Más información</p></button>						
+				</article>
+			</div>
+			<div class="container container-small">
+			<hr>
+			<article class="jumper">
+				<h1 class="info" id="title-1">¿Qué es esto?</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut mattis dolor, eget malesuada tellus. Nulla aliquam, metus et posuere aliquet, ex nulla commodo risus, sit amet accumsan ipsum sem ac nulla. Fusce diam ante, molestie ac posuere sit amet, consequat non nulla. Sed ac massa in turpis scelerisque pellentesque. Phasellus lacus ipsum, aliquam ut dapibus et, finibus at felis. Cras vel nulla pretium, tincidunt turpis vel, interdum risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies vulputate ipsum, vel luctus nulla tincidunt quis. In ac mi sodales, tincidunt erat ornare, blandit quam. Vestibulum dignissim tincidunt lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				<h1 class="info" id="title-1">¿Como iniciar?</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut mattis dolor, eget malesuada tellus. Nulla aliquam, metus et posuere aliquet, ex nulla commodo risus, sit amet accumsan ipsum sem ac nulla. Fusce diam ante, molestie ac posuere sit amet, consequat non nulla. Sed ac massa in turpis scelerisque pellentesque. Phasellus lacus ipsum, aliquam ut dapibus et, finibus at felis. Cras vel nulla pretium, tincidunt turpis vel, interdum risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies vulputate ipsum, vel luctus nulla tincidunt quis. In ac mi sodales, tincidunt erat ornare, blandit quam. Vestibulum dignissim tincidunt lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			</article>
+			<a href="#index-body">Subir</a>
+			</div>
+
+		</section>
+	</div>
+
+	<footer>
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+		<script src="components/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="public/js/index.js"></script>
+	</footer>
+</div>
+</body>
+</html>

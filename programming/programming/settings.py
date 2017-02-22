@@ -65,7 +65,7 @@ ROOT_URLCONF = 'programming.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(PROJECT_ROOT, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'programming.wsgi.application'
 
-
+CSRF_COOKIE_SECURE = False
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
@@ -130,4 +130,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components')
+BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components' )

@@ -1,0 +1,65 @@
+<h2>Todos los ejercicios</h2>
+  <div class='row'>
+    <div class='col-md-1 col-sm-1 col-xs-1'>
+    </div>
+    <div class='col-md-11 col-sm-11 col-xs-11'>
+      <div class"opciones-orden">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+          </div>
+          <div class="col-md-3 col-xs-12">
+            <div class='ejercicio-rating'>
+              <select ng-model='$ctrl.orderProp'  class="selector">
+                <option value="nivel_dificultad">Ascedente</option>
+                <option value="-nivel_dificultad">Descendente</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-12">
+            <div class='search-content'>
+              <span class='search'>Buscar:</span>
+              <input ng-model='$ctrl.query'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='ejercicios' ng-repeat='ejercicio in $ctrl.ejercicios | filter: $ctrl.query | orderBy: $ctrl.orderProp'>
+        <div class='ejercicio'>
+          <header class='ejercicio-titulo'>
+            <div class='row'>
+              <div class='col-md-6 col-sm-6 col-xs-12 '>
+                <a href="#!/ejercicios/{{ejercicio.id}}" class='ejercicio-titulo-link'>{{ejercicio.titulo}}</a>
+              </div>
+              <div class='col-md-6 col-sm-6 col-xs-12 '>
+                <span class='autor'>{{ejercicio.autor}}</span>
+              </div>
+            </div>
+          </header>
+          <footer class='ejercicio-contenido'>
+            <div class='row'>
+              <div class='col-md-6 col-sm-6 col-xs-12 '>
+                  <span class='zeta'>Resuelto por estudiantes:</span>
+                  <span class='porcentaje'>{{ejercicio.porcentaje_resueltos}}%</span>
+                </div >
+                <div class='col-md-6 col-sm-6 col-xs-12 '>
+                  <span class='zeta'>Dificultad:</span>
+                  <span class='dificultad'>
+                      <icon  ng-repeat="n in $ctrl.range(1,ejercicio.nivel_dificultad)" class='fa fa-star fa-lg'></icon>
+                  </span>
+                </div>
+              </div>
+              <div class='ejercicio-descripcion'>
+                <span class='zeta'>Descripcion: </span>
+                <span class='descripcion'>{{ejercicio.descripcion}}</span>
+              </div>
+              <div class='ejercicio-etiquetas'>
+                <span class='zeta'>Etiquetas: </span>
+                <span class='etiqueta' ng-repeat="etiqueta in ejercicio.etiquetas">{{etiqueta}} </span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

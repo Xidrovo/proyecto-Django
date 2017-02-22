@@ -1,0 +1,116 @@
+#ask{
+	color: white;
+	text-align: center;
+	font-size: 3em;
+}
+#ask, #frase{ font-family: 'Roboto Condensed', sans-serif; }
+/*Navbar css*/
+
+.jumper{
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 10px;
+}
+.words{
+	color: #001c43;
+}
+h6{
+	text-align: left;
+}		
+.clearer{
+	clear:both;
+}
+.modal-footer button{
+	width: 45%;
+}
+.custom-class p{
+		padding: 0px;
+		margin: 0px;
+	}
+#index-body{
+	background-image: url('');
+	background: url(http://blog.espol.edu.ec/arrivade/files/2013/05/IMG-20130530-002324.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#frase{
+	color:white;
+	padding: 0px;
+	margin: 0px;
+	font-size: 1.3em;
+}
+.info{
+	color:black;
+	padding: 25px;
+}
+.jumper p{
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 15%;
+}
+.wrapper {
+    position: relative;
+    height: 100vh;
+}
+.container-small{
+	width: 75%;
+	margin-top: 20%;
+	margin-bottom: 10%;
+}
+#begin{
+	font-size: 30px;
+	color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+body.modal-open div.modal-backdrop { 
+    z-index: 0; 
+}
+/*Aquí se aplica todo para colocar una cita de algún personaje*/
+blockquote {
+	border:none;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin-bottom:-30px;
+	position: relative; 
+	max-width: 400px; 
+    margin: 0 auto; 
+    padding-left: 0.4em; 
+}		
+blockquote h3:before { 
+    content: "\201C";
+    font-weight: bold;
+    font-size:50px;
+    color:white;
+    position: absolute; 
+    top: -0.2em;
+    left: -0.5em; 
+    font-family: 'Georgia'; 
+} 
+blockquote h3:after { 
+    content: "\201D";
+    font-weight: bold;
+    font-size:50px;
+    color: white;
+    position: absolute; 
+    bottom: -0.6em;
+    right: 0; 
+    font-family: 'Georgia'; 
+}
+/*Fin del estilo de la cita*/
+
+@media only screen and (max-width: 766px){
+	.custom-class { width: 100%; display:block; }
+	.custom-class p{
+		font-size: 0.5em;
+	}
+	#ask{
+		font-size: 2em;
+	}
+	.container-small{
+		width: 100%;
+		font-size: 80%;
+	}
+}

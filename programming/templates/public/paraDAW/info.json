@@ -1,0 +1,991 @@
+{
+  "graders": [
+    {
+      "matricula": "201419079",
+      "nombre": "Oswaldo Josmany Aguilar Noboa",
+      "correo": [
+        "oswjagui@espol.edu.ec",
+        "oswjagui@fiec.espol.edu.ec",
+        "oswaldojosmanyam2@gmail.com"
+      ],
+      "profesor": [
+        "Eduardo Murillo Bajaña",
+        "Eduardo Murillo Bajaña",
+        "Jorge Magallanes Borbor"
+      ],
+      "paralelo": [
+        "17",
+        "35",
+        "11"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "201302882",
+      "nombre": "Jorge Luis Cedeño Arteaga",
+      "correo": [
+        "jlcedeno@espol.edu.ec",
+        "jlcedeno@espol.edu.ec",
+        "jlcedeno@espol.edu.ec"
+      ],
+      "profesor": [
+        "Cruz Maria Falcones",
+        "Cruz Maria Falcones",
+        "Cruz Maria Falcones"
+      ],
+      "paralelo": [
+        "2",
+        "6"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "200000000",
+      "nombre": "Betty Lucy Cepeda Salgado",
+      "correo": [
+        ""
+      ],
+      "profesor": [
+        "Jorge Ugarte Fajardo",
+        "Edison del Rosario Camposano",
+        "José Villa Vásquez"
+      ],
+      "paralelo": [
+        "15",
+        "22",
+        "25"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "200000000",
+      "nombre": "Josselyn Esther Gallo Muñoz",
+      "correo": [
+        ""
+      ],
+      "profesor": [
+        "Ginger Saltos Bernal",
+        "Ginger Saltos Bernal",
+        "Orlando Zambrano Romero"
+      ],
+      "paralelo": [
+        "21",
+        "29",
+        "16"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "201421632",
+      "nombre": "Jorge Isaac Guerra Solís",
+      "correo": [
+        "jiguerra@espol.edu.ec"
+      ],
+      "profesor": [
+        "Marco Calderón Arguello",
+        "Eduardo Cruz Ramirez",
+        "Orlando Zambrano Romero"
+      ],
+      "paralelo": [
+        "4",
+        "10",
+        "16"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "200000000",
+      "nombre": "Gerald Fernando Gutierrez Jimenez",
+      "correo": [
+        ""
+      ],
+      "profesor": [
+        "Rocío Mera Suárez",
+        "Rocío Mera Suárez",
+        "Ana Tapia Rosero"
+      ],
+      "paralelo": [
+        "33",
+        "38",
+        "12"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "200000000",
+      "nombre": "Andrea Viviana Naranjo Lima",
+      "correo": [
+        "avnaranj@espol.edu.ec",
+        "andreanaranjolima@gmail.com",
+        "avnaranj@fiec.espol.edu.ec"
+      ],
+      "profesor": [
+        "Meiying Cheung Ruíz",
+        "Meiying Cheung Ruíz",
+        "Ana Tapia Rosero"
+      ],
+      "paralelo": [
+        "24",
+        "28",
+        "12"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "201421319",
+      "nombre": "Joselyn Ibeth Parra Córdova",
+      "correo": [
+        "jiparra@espol.edu.ec",
+        "jiparra@espol.edu.ec",
+        "jiparra@espol.edu.ec"
+      ],
+      "profesor": [
+        "Jhonny Pincay Nieves",
+        "Dalton Noboa Macías",
+        "José Villa Vásquez"
+      ],
+      "paralelo": [
+        "1",
+        "26",
+        "25"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "201304684",
+      "nombre": "Jaminson Riascos Muguerza",
+      "correo": [
+        "riascos@espol.edu.ec",
+        "jamin.r.m@gmail.com",
+        "riascos@fiec.espol.edu.ec"
+      ],
+      "profesor": [
+        "Lorena Carlo Unda",
+        "Rafael Bonilla Armijos",
+        "Rafael Bonilla Armijos"
+      ],
+      "paralelo": [
+        "27",
+        "7",
+        "8"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "201506161",
+      "nombre": "Alexis Leonardo Rivadeneira Sevilla",
+      "correo": [
+        "alrivade@espol.edu.ec",
+        "alrivade@fiec.espol.edu.ec",
+        "alexisleo15@gmail.com"
+      ],
+      "profesor": [
+        "Frank Malo",
+        "Frank Malo",
+        "Miguel Realpe Robalino"
+      ],
+      "paralelo": [
+        "18",
+        "20",
+        "14"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "200000000",
+      "nombre": "Juan Carlos Saltos Núñez",
+      "correo": [
+        ""
+      ],
+      "profesor": [
+        "Verónica Carrasco Idrovo",
+        "Verónica Carrasco Idrovo",
+        "Miguel Realpe Robalino"
+      ],
+      "paralelo": [
+        "30",
+        "31",
+        "14"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "201507022",
+      "nombre": "Ariel Enrique Sánchez Muñoz",
+      "correo": [
+        "ariensan@espol.edu.ec",
+        "ariel4432@hotmail.com"
+      ],
+      "profesor": [
+        "Luis Rodriguez Ojeda",
+        "Luis Rodriguez Ojeda",
+        "Jorge Magallanes Borbor"
+      ],
+      "paralelo": [
+        "5",
+        "23",
+        "11"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "201505935",
+      "nombre": "Miguel Ángel Sánchez Romero",
+      "correo": [
+        "migansan@espol.edu.ec",
+        "migansan@fiec.espol.edu.ec",
+        "mangelsr@live.com"
+      ],
+      "profesor": [
+        "Ángela Carrera Rivera",
+        "Ángela Carrera Rivera",
+        "Rodrigo Saraguro Bravo"
+      ],
+      "paralelo": [
+        "32",
+        "36",
+        "13"
+      ],
+      "tipo": "grader"
+    },
+    {
+      "matricula": "200000000",
+      "nombre": "Anni Rosa Santacruz Hernández",
+      "correo": [
+        ""
+      ],
+      "profesor": [
+        "Paola Yánez Pazmiño",
+        "Paola Yánez Pazmiño",
+        "Carmen Vaca Ruiz"
+      ],
+      "paralelo": [
+        "9",
+        "19",
+        "3"
+      ],
+      "tipo": "grader"
+    }
+  ],
+  "TA": [
+    {
+      "matricula": "201410264",
+      "nombre": "Galo Daniel Castillo López",
+      "correo": "gadacast@espol.edu.ec",
+      "horario": [
+        "Lunes 14:00 - 16:30",
+        "Miércoles 14:00 - 16:30",
+        "Martes 10:30 - 11:30",
+        "Jueves 10:30 - 11:30"
+      ],
+      "aula": [
+        "24A - 210",
+        "24A - 210",
+        "Sala de Ayudantes de FIEC",
+        "Sala de Ayudantes de FIEC"
+      ],
+      "tipo": "TA"
+    },
+    {
+      "matricula": "201302882",
+      "nombre": "Jorge Luis Cedeño Arteaga",
+      "correo": "jlcedeno@espol.edu.ec",
+      "horario": [
+        "Martes 13:30 - 17:30",
+        "Martes 12:30 - 13:30",
+        "jueves 9:30 - 10:30"
+      ],
+      "aula": [
+        "24A - 103",
+        "Sala de Ayudantes de FIEC",
+        "Sala de Ayudantes de FIEC"
+      ],
+      "tipo": "TA"
+    },
+    {
+      "matricula": "201410871",
+      "nombre": "María Belén Guaranda Cabezas",
+      "correo": "mguarand@espol.edu.ec",
+      "horario": [
+        "Lunes  7:30  - 9:30 ",
+        "Miercoles 7:30 - 9:30",
+        "Viernes  11:30 - 12:30"
+      ],
+      "aula": [
+        "24A - 207",
+        "24A -  113",
+        "\n  Sala de\n  Ayudantes de FIEC"
+      ],
+      "tipo": "TA"
+    },
+    {
+      "matricula": "201417433",
+      "nombre": "Gerald  Fernando Gutierrez Jimenez",
+      "correo": "gerfegut@espol.edu.ec",
+      "horario": [
+        "Viernes 7:30 - 10:30",
+        "Martes  08:30 - 09:30",
+        "Viernes  11:30 - 1:30"
+      ],
+      "aula": [
+        "24A - 207",
+        "24A -  113",
+        "Sala de Ayudantes de FIEC"
+      ],
+      "tipo": "TA"
+    },
+    {
+      "matricula": "201304087",
+      "nombre": "Emmanuel Fernando Morán Barreiro",
+      "correo": "fnando1995@gmail.com",
+      "horario": [
+        "Lunes  7:30  - 9:30 ",
+        "Lunes  11:30 - 13:30",
+        "Martes  7:30 - 8:30",
+        "Jueves 7:30 - 8:30"
+      ],
+      "aula": [
+        "24A-103",
+        "24A-103",
+        "Sala de  Ayudantes de FIEC",
+        "Sala de Ayudantes de FIEC"
+      ],
+      "tipo": "TA"
+    },
+    {
+      "matricula": "201304684",
+      "nombre": "Jaminson Riascos Muguerza",
+      "correo": "riascos@espol.edu.ec",
+      "horario": [
+        "Martes 11:30 - 13:30",
+        "Jueves  11:30 - 13:30",
+        "Viernes 11:30 - 12:30",
+        "Viernes 12:30 - 13:30"
+      ],
+      "aula": [
+        "24A-210",
+        "24A-103",
+        "CIB",
+        "CIB"
+      ],
+      "tipo": "TA"
+    },
+    {
+      "matricula": "201410224",
+      "nombre": "Leonardo Xavier Kuffo Rivero",
+      "correo": "lkuffo@espol.edu.ec",
+      "horario": [
+        "Martes 9:30 - 11:30",
+        "Viernes 11:30 - 13:30",
+        "Viernes  13:30 - 14:30"
+      ],
+      "aula": [
+        "SP-01",
+        "24A-204",
+        "Sin Asignar"
+      ],
+      "tipo": "TA"
+    },
+    {
+      "matricula": "200000000",
+      "nombre": "Jorge Murillo",
+      "correo": "jorgermurillo@gmail.com",
+      "horario": [
+        "Marte 14:00 - 16:00",
+        "Jueves 14:00 - 16:00",
+        "Viernes 10:00-11:00"
+      ],
+      "aula": [
+        "A-114",
+        "A-103",
+        "\n  Sala de\n  Ayudantes"
+      ],
+      "tipo": "TA"
+    },
+    {
+      "matricula": "201421632",
+      "nombre": "Jorge Isaac Guerra Solís",
+      "correo": "jiguerra@espol.edu.ec",
+      "horario": [
+        "Jueves 7:30 - 9:30"
+      ],
+      "aula": [
+        "24A - 201"
+      ],
+      "tipo": "TA"
+    }
+  ],
+  "profesores": [
+    {
+      "nombre": "AVENDAÑO SUDARIO ALLAN ROBERTO",
+      "aula": [
+        "A-210",
+        "24C-205 FIMCP",
+        "COMP A FIMCP"
+      ],
+      "paralelo": [
+        "37",
+        "34"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES",
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "7:30:00-9:30:00",
+        "15:30:00-17:30:00"
+      ],
+      "correo": [
+        "aavendan@fiec.espol.edu.ec",
+        "aavendan@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/javiles.jpg"
+    },
+    {
+      "nombre": "BONILLA RAFAEL IGNACIO",
+      "aula": [
+        "15A-05",
+        "A-208",
+        "LPU1",
+        "LPU2"
+      ],
+      "paralelo": [
+        "8",
+        "7"
+      ],
+      "dia": [
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "14:30:00-16:30:00",
+        "11:30:00-13:30:00"
+      ],
+      "correo": [
+        "rabonilla@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/rafael%20bonilla.jpg"
+    },
+    {
+      "nombre": "CALDERON ARGUELLO MARCO ANTONIO",
+      "aula": [
+        "IC-27",
+        "IL02 - LABORATORIO BETA"
+      ],
+      "paralelo": [
+        "4"
+      ],
+      "dia": [
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "14:30:00-16:30:00"
+      ],
+      "correo": [
+        "ancalder@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/mcalderon.jpg"
+    },
+    {
+      "nombre": "CARLO UNDA MARIA LORENA",
+      "aula": [
+        "LABORATORIO DE INGENIERÍA DE SOFTWARE",
+        "15A-01"
+      ],
+      "paralelo": [
+        "27"
+      ],
+      "dia": [
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "13:30:00-15:30:00"
+      ],
+      "correo": [],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/lcarlo_0.jpg"
+    },
+    {
+      "nombre": "CARRASCO IDROVO VERONICA JANNETH",
+      "aula": [
+        "15A-02",
+        "LAB. CENTAURO",
+        "LABORATORIO DE INGENIERÍA DE SOFTWARE",
+        "COM4"
+      ],
+      "paralelo": [
+        "30",
+        "31"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES",
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "7:30:00-9:30:00",
+        "15:30:00-17:30:00"
+      ],
+      "correo": [
+        "vcarrasc@fiec.espol.edu.ec",
+        "vcarrasc@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/no-avatar_3.jpg"
+    },
+    {
+      "nombre": "CARRERA RIVERA ANGELA ISABEL",
+      "aula": [
+        "COMP A FIMCP",
+        "15A-04",
+        "A-114",
+        "LABORATORIO DE COMPUTACION 2"
+      ],
+      "paralelo": [
+        "32",
+        "36"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "9:30:00-11:30:00",
+        "13:30:00-15:30:00"
+      ],
+      "correo": [],
+      "img": ""
+    },
+    {
+      "nombre": "CHEUNG RUIZ IRENE MEIYING",
+      "aula": [
+        "LAB. CENTAURO",
+        "B-201 (AULA-EDCOM)",
+        "15A-01",
+        "C-305 (LAB-PC-EDCOM)"
+      ],
+      "paralelo": [
+        "24",
+        "28"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES",
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "7:30:00-9:30:00"
+      ],
+      "correo": [
+        "icheung@espol.edu.ec",
+        "mcheung@fiec.espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/no-avatar_5.jpg"
+    },
+    {
+      "nombre": "CRUZ RAMIREZ EDUARDO SEGUNDO",
+      "aula": [
+        "LAB. CENTAURO",
+        "COM3"
+      ],
+      "paralelo": [
+        "10"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "13:30:00-15:30:00"
+      ],
+      "correo": [
+        "escruz@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/eduardocruz2.jpg"
+    },
+    {
+      "nombre": "DEL ROSARIO CAMPOSANO EDISON ISAIAS",
+      "aula": [
+        "31B102 ICM",
+        "LAB. OMEGA ICM"
+      ],
+      "paralelo": [
+        "22"
+      ],
+      "dia": [
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "7:30:00-9:30:00"
+      ],
+      "correo": [
+        "edelros@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/erosario.jpg"
+    },
+    {
+      "nombre": "FALCONES MONTESDEOCA CRUZ MARIA",
+      "aula": [
+        "LABORATORIO DE INGENIERÍA DE SOFTWARE",
+        "COMP A FIMCP",
+        "A-103",
+        "COM4"
+      ],
+      "paralelo": [
+        "6",
+        "2"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES",
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "11:30:00-13:30:00",
+        "13:30:00-15:30:00"
+      ],
+      "correo": [
+        "cfalcone@espol.edu.ec",
+        "cfalcone@fiec.espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/cruz%20falcones.jpg"
+    },
+    {
+      "nombre": "MAGALLANES BORBOR JORGE ANTONIO",
+      "aula": [
+        "LABORATORIO CISCO",
+        "A-105"
+      ],
+      "paralelo": [
+        "11"
+      ],
+      "dia": [
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "14:30:00-16:30:00"
+      ],
+      "correo": [
+        "jmagalla@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/jorge%20magallanes.jpg"
+    },
+    {
+      "nombre": "MALO PINZA FRANK CARLOS",
+      "aula": [
+        "A-205",
+        "31B303 ICM",
+        "LAB. SIGMA ICM",
+        "COM4"
+      ],
+      "paralelo": [
+        "18",
+        "20"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES",
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "14:30:00-16:30:00",
+        "9:30:00-11:30:00"
+      ],
+      "correo": [
+        "fmalo@fiec.espol.edu.ec",
+        "fmalo@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/no-avatar_7.jpg"
+    },
+    {
+      "nombre": "MERA SUÁREZ ROCÍO ELIZABETH",
+      "aula": [
+        "A-210",
+        "24C-106 FIMCP",
+        "COMP A FIMCP"
+      ],
+      "paralelo": [
+        "38",
+        "33"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES",
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "9:30:00-11:30:00",
+        "13:30:00-15:30:00"
+      ],
+      "correo": [
+        "remera@espol.edu.ec",
+        "emera@fiec.espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/no-avatar_8.jpg"
+    },
+    {
+      "nombre": "MURILLO BAJAÑA EDUARDO WENCESLAO",
+      "aula": [
+        "COM2",
+        "A-114",
+        "COMP A FIMCP"
+      ],
+      "paralelo": [
+        "35",
+        "17"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "7:30:00-9:30:00",
+        "11:30:00-13:30:00"
+      ],
+      "correo": [
+        "wmurillo@fiec.espol.edu.ec",
+        "emurillo@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/no-avatar_9.jpg"
+    },
+    {
+      "nombre": "NOBOA MACIAS DALTON GEOVANNY",
+      "aula": [
+        "BA18 ICM",
+        "LAB. OMEGA ICM"
+      ],
+      "paralelo": [
+        "26"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "16:30:00-18:30:00"
+      ],
+      "correo": [],
+      "img": ""
+    },
+    {
+      "nombre": "PINCAY NIEVES JHONNY VLADIMIR",
+      "aula": [
+        "LABORATORIO DE INGENIERÍA DE SOFTWARE",
+        "A-113"
+      ],
+      "paralelo": [
+        "1"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "11:30:00-13:30:00"
+      ],
+      "correo": [
+        "jpincay@fiec.espol.edu.ec",
+        "jvpincay@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/johnny%20pincay_0.jpg"
+    },
+    {
+      "nombre": "REALPE ROBALINO MIGUEL ANDRES",
+      "aula": [
+        "A-114",
+        "LABORATORIO CISCO"
+      ],
+      "paralelo": [
+        "14"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "15:30:00-17:30:00"
+      ],
+      "correo": [],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/mrealpe_0.jpg"
+    },
+    {
+      "nombre": "RODRIGUEZ OJEDA LUIS ENRIQUE",
+      "aula": [
+        "BA11 ICM",
+        "LAB. OMEGA ICM"
+      ],
+      "paralelo": [
+        "23",
+        "5"
+      ],
+      "dia": [
+        "MIÉRCOLES",
+        "VIERNES",
+        "MARTES",
+        "JUEVES"
+      ],
+      "hora": [
+        "7:30:00-9:30:00",
+        "9:30:00-11:30:00"
+      ],
+      "correo": [],
+      "img": ""
+    },
+    {
+      "nombre": "SALTOS BERNAL GINGER VIVIANA",
+      "aula": [
+        "15A-02",
+        "A-210",
+        "LABORATORIO CISCO"
+      ],
+      "paralelo": [
+        "21",
+        "29"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "13:30:00-15:30:00",
+        "8:30:00-10:30:00"
+      ],
+      "correo": [
+        "vsaltos@fiec.espol.edu.ec",
+        "gvsaltos@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/no-avatar_10.jpg"
+    },
+    {
+      "nombre": "SARAGURO BRAVO RODRIGO ALEXANDER",
+      "aula": [
+        "COM3",
+        "COMP B FIMCP"
+      ],
+      "paralelo": [
+        "13"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "9:30:00-11:30:00"
+      ],
+      "correo": [],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/saraguro.jpg"
+    },
+    {
+      "nombre": "TAPIA ROSERO ANA TERESA",
+      "aula": [
+        "COM4",
+        "LABORATORIO DE COMPUTACION 2"
+      ],
+      "paralelo": [
+        "12"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "9:30:00-11:30:00"
+      ],
+      "correo": [
+        "atapia@fiec.espol.edu.ec",
+        "atapia@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/ana%20tapia.jpg"
+    },
+    {
+      "nombre": "UGARTE FAJARDO JORGE GUSTAVO",
+      "aula": [
+        "LAB. SIGMA ICM",
+        "BA22 ICM"
+      ],
+      "paralelo": [
+        "15"
+      ],
+      "dia": [
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "9:30:00-11:30:00"
+      ],
+      "correo": [],
+      "img": ""
+    },
+    {
+      "nombre": "VACA RUIZ CARMEN KARINA",
+      "aula": [
+        "COM3",
+        "LABORATORIO DE COMPUTACION 2"
+      ],
+      "paralelo": [
+        "3"
+      ],
+      "dia": [
+        "JUEVES",
+        "MARTES"
+      ],
+      "hora": [
+        "11:30:00-13:30:00"
+      ],
+      "correo": [
+        "cvaca@espol.edu.ec"
+      ],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/cvaca_0.jpg"
+    },
+    {
+      "nombre": "VILLA VASQUEZ JOSE FABIAN",
+      "aula": [
+        "BA22 ICM",
+        "LAB. BETA ICM"
+      ],
+      "paralelo": [
+        "25"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "14:30:00-16:30:00"
+      ],
+      "correo": [],
+      "img": ""
+    },
+    {
+      "nombre": "YANEZ PAZMIÑO WENDY PAOLA",
+      "aula": [
+        "LAB. CENTAURO",
+        "A-201",
+        "A-202"
+      ],
+      "paralelo": [
+        "9",
+        "19"
+      ],
+      "dia": [
+        "LUNES",
+        "MIÉRCOLES"
+      ],
+      "hora": [
+        "9:30:00-11:30:00",
+        "11:30:00-13:30:00"
+      ],
+      "correo": [],
+      "img": "https://www.fiec.espol.edu.ec/sites/fiec.espol.edu.ec/files/pyanez_0.jpg"
+    }
+  ]
+}

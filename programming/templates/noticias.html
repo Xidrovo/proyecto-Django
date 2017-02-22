@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Noticias</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class = "container">
+		<h1>Noticias</h1>
+		{% for noticia in noticias %}
+		<article>
+			<h2>{{ noticia.titulo }}</h2>
+			<div class = "info">
+				<p class="date"> {{noticia.fecha_publicacion}}</p>
+				<p>{{ noticia.descrpcion }}</p>
+				<p class="tags">tags: {{noticia.tags}}</p>
+			</div>
+		</article>
+		{% endfor %}
+
+		<h2>¿Agregar una nueva noticia?</h2>
+		<form action = "/nueva_noticia" method="post">
+			{% csrf_token %}
+			<p>Titulo</p>
+			<input type="text"  class="form-control" name="titulo"><br>
+			<p>Descripcion</p>
+			<textarea name="descripcion"  class="form-control" cols="40" rows="5"></textarea><br>
+			<p>Tags</p>
+			<input type="text" class="form-control" name="tag"><br>
+			<input type="submit" class="btn btn-primary" value="submit">
+		</form>
+	</div>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

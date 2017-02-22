@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<!--Enlace a public/css/custom-navbar.css-->
+	<link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/default.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/custom-navbar.css">
+	<style type="text/css">
+		#back img{
+			width: 35%;
+			height: 35%;
+			border: solid 5px;
+			box-shadow: 10px 10px 5px #888888;
+		}
+		h1{
+			margin-bottom: 3%;
+			color: rgba(0,255,255,0.8);
+			text-shadow: 0.1em 0.1em 0.2em lightslategrey;
+		}
+		p{
+			margin-top: 2%;
+			color: red;
+		}
+		a, a:hover{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<header>		
+			<nav class="navbar navbar-default navbar-static-top">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+			      </button>
+			      <a class="navbar-brand" href="#">ESPOL</a>
+			    </div>
+			    <div class="collapse navbar-collapse myNavbar" id="myNavbar">
+			      <ul class="nav navbar-nav">
+			        <li class="espol"><a href="../../indexTeacher.html">Inicio</a></li>
+			        <li class="espol"><a href="../../app/curso/cursoTeacher.html">El Curso</a></li>
+			        <li class="espol"><a href="../../app/semanal/semanalTeacher.html">Semana a Semana</a></li>
+			        <li class="espol"><a href="../../app/equipo/equipoTeacher.html">Equipo</a></li>
+			        <li class="espol"><a href="../../app/ayudantias/ayudantiasTeacher.html">Ayudantías</a></li>
+			        <li class="espol"><a href="#">Sandbox</a></li>
+			        <li class="espol"><a href="../../app/proyectos/proyectosTeacher.html">Proyectos</a></li>
+			        <li class="espol"><a href="../../app/perfil/perfilTeacher.html">Perfil</a></li>
+			      </ul>
+			      <ul class="nav navbar-nav navbar-right">
+			        <li>
+			        	<button class="btn btn-info"  data-toggle="modal" data-target="#myModal">
+						    <img src="../../public/media/avatar/mcalderon.jpg" id="login" />
+						</button>
+						
+			        </li>
+			      </ul>
+			    <!--Modal para el PopUP de login-->
+						<div class="modal fade" id="myModal" role="dialog">
+						    <div class="modal-dialog">						    
+							      <!-- Modal content-->
+							    <div class="modal-content">
+							    	<div class="modal-header">
+							        	<button type="button" class="close" data-dismiss="modal"></button>
+							        	<img src="../../public/media/avatar/mcalderon.jpg" class="profile-img img-responsive center-block">
+							        	<a href="../../app/perfil/perfilTeacher.html"><p class="text-center">Ver Perfil</p></a>
+							    	</div>
+							    	<div class="modal-body">
+							    		<form>
+										    <div class="form-group text-center">
+										      <h4>Marco Calderón</h4>
+										    </div>
+										    <div class="form-group text-center">
+										      <h4>mcalderon</h4>
+										    </div>
+										  </form>
+							    	</div>
+							    	<div class="modal-footer">
+							    		<button type="button" class="btn btn-default inline pull-left" id="sign-out" onClick="location.href = '../../index.html';">Sign out</button>
+							    		<button type="button" class="btn btn-default inline pull-right" data-dismiss="modal">Cerrar</button>
+							    		<hr class="clearer">
+								</div>						      
+							</div>
+						</div>
+  						<!--Fin de la creación del modal-->
+			    </div>
+			  </div>
+			</nav>
+	</header>
+	<div class="container" id="back">
+	<a href="../../indexTeacher.html">
+		<h1 class="text-center">¡Lo sentimos!</h1>
+		<img src="../../public/media/img/jamytafy.jpg" class="img-responsive center-block">
+		<p class="text-center">página en mantenimiento</p>
+	</a>
+	</div>
+	<footer>
+		<script src="../..//public/js/jquery.js"></script>
+		<script src="../..//public/js/bootstrap.min.js"></script>
+	</footer>
+</body>
+</html>

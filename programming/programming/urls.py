@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from programacion.views import noticias, crearNoticia
+admin.autodiscover()
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^noticias/$', noticias, name = "noticias"),
+    url(r'^nueva_noticia$',crearNoticia, name = "crearNoticia"), 
 ]

@@ -1,0 +1,78 @@
+<div class='contenedor'>
+  <nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li>
+      </li>
+      <li><a href="#!/">Sandbox</a></li>
+      <li><a href="#!/profesores">Profesores</a></li>
+      <li>
+        <a href="#!/profesor/{{$ctrl.autor}}">Ejercicios</a>
+      </li>
+    </ul>
+  </nav>
+  <h1>Crear Ejercicio {{$ctrl.autor}}</h1>
+  <form class='formulario'>
+   <div class="form-group titulo">
+     <label for="autor">Titulo</label>
+     <input type="text" class="form-control"placeholder="titulo">
+   </div>
+   <div class="form-group tags">
+     <tags-input ng-model="$ctrl.tags" placeholder='anadir tags' ></tags-input>
+   </div>
+   <div class='form-group dificultad'>
+     <label for="dificultad">Dificultad</label><input-stars max="5" icon-base="fa fa-fw" icon-empty="fa-circle-o" icon-hover="hover" icon-full="fa-circle" ng-model="YourCtrl.property"></input-stars>
+   </div>
+   <div class="form-group declaracion-problema">
+     <label for="exampleInputPassword1">Declaracion Problema</label>
+     <textarea class="form-control" rows="10" placeholder="200 max"></textarea>
+   </div>
+   <div class="form-group notas">
+     <label for="exampleInputFile">Ingrese Notas</label>
+         <fieldset  data-ng-repeat="choice in $ctrl.choices">
+           <input type="text" class='form-control' ng-model="choice.name" name="" placeholder="Ingrese una anotacion, max 25">
+           <button class="btn btn-danger" ng-show="$last" ng-click="$ctrl.removeChoice()">-</button>
+           <br>
+        </fieldset>
+        <button class="btn btn-primary" ng-click="$ctrl.addNewChoice()">Anadir anotacion</button>
+   </div>
+   <div class="form-group formato-entrada">
+      <label for="">Formato de entrada</label>
+      <textarea class="form-control" rows="5" placeholder="50 max"></textarea>
+   </div>
+   <div class="form-group constrains">
+      <label for="">Constrains</label>
+      <textarea class="form-control" rows="5" placeholder="50 max"></textarea>
+   </div>
+   <div class="form-group formato-salida">
+     <label for="exampleInputFile">Ingrese Salidas</label>
+         <fieldset  data-ng-repeat="choice in $ctrl.salida">
+           <input type="text" class='form-control' ng-model="salida.name" name="" placeholder="Ingrese una salida, max 25">
+           <button class="btn btn-danger" ng-show="$last" ng-click="$ctrl.removeSalida()">-</button>
+           <br>
+        </fieldset>
+        <button class="btn btn-primary" ng-click="$ctrl.addNewSalida()">Anadir salida</button>
+   </div>
+   <div class="form-group ejemplo-entrada">
+     <label for="exampleInputFile">Ejemplos entradas</label>
+         <fieldset  data-ng-repeat="choice in $ctrl.entrada">
+           <input type="text" class='form-control' ng-model="entrada.name" name="" placeholder="Ingrese una entrada ejemplo, max 25">
+           <button class="btn btn-danger" ng-show="$last" ng-click="$ctrl.removeEntrada()">-</button>
+           <br>
+        </fieldset>
+        <button class="btn btn-primary" ng-click="$ctrl.addNewEntrada()">Anadir Entrada</button>
+   </div>
+   <div class="form-group ejemplo-salida">
+     <label for="exampleInputFile">Ejemplos Salidas</label>
+         <fieldset  data-ng-repeat="choice in $ctrl.salida_sample">
+           <input type="text" class='form-control' ng-model="salida_sample.name" name="" placeholder="Ingrese una salida ejemplo, max 25">
+           <button class="btn btn-danger" ng-show="$last" ng-click="$ctrl.removeSalida_sample()">-</button>
+           <br>
+        </fieldset>
+        <button class="btn btn-primary" ng-click="$ctrl.addNewSalida_sample()">Anadir salida</button>
+   </div>
+   <div class="form-group explicacion">
+     <label for="exampleInputPassword1">Explicacion Problema</label>
+     <textarea class="form-control" rows="10" placeholder="200 max"></textarea>
+   </div>
+   <button type="submit" class="btn btn-default">Crear</button>
+  </form>

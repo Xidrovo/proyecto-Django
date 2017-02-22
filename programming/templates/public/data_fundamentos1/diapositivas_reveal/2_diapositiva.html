@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tipos de datos y variables</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="./file.css">
+</head>
+
+<body>
+
+
+
+  <div class="reveal diapo">
+
+    <div class="slides">
+      <!-- DIAPOSITIVA 1-->
+      <section id='slide_1'>
+        <h2>Tipos de Datos, variables y operadores basicos</h2>
+        <h3>Fundamentos de Programacion</h3>
+        <h3>Fiec04341</h3>
+        <h3>MSc. Marco Calderon A</h3>
+      </section>
+
+      <!-- DIAPOSITIVA 2-->
+      <section id='slide_2'>
+        <h2>Tipos de datos primitivos</h2>
+      </section>
+
+      <!-- DIAPOSITIVA 3-->
+      <section id='slide_3'>
+        <h2>Tipo de Dato</h2>
+        <li>
+          Un tipo de dato es un atributo de los datos que indica al ordenador sobre la clase de datos que se va a trabajar
+        </li>
+      </section>
+
+      <!-- DIAPOSITIVA 4-->
+      <section id="slide_4">
+        <h2>TIPOS DE DATOS PRIMITIVOS</h2>
+        <li>El lenguaje Python permite operar con los siguientes tipos de datos básicos:</li>
+        <p>
+          – Numéricos: enteros, reales o de punto flotante, y complejos
+          <br>
+          – Lógicos: booleanos
+          <br>
+          – Cadenas de caracteres (tipo de dato estructurado).
+        </p>
+      </section>
+
+      <!-- DIAPOSITIVA 5-->
+      <section id="slide_5">
+        <h3>DATOS NUMÉRICOS</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Enteros</td>
+              <td>int</td>
+              <td>Numeros sin parte fraccionaria</td>
+              <td>52 <br>0 <br>-318</td>
+            </tr>
+            <tr>
+              <td>Reales o de punto flotante</td>
+              <td>float</td>
+              <td>Numeros con parte fraccionaria o expresados en notacion de potencias de 10</td>
+              <td>6.31 <br>-0.089 <br>4.1e-3</td>
+            </tr>
+            <tr>
+              <td>Complejos</td>
+              <td>complex</td>
+              <td>Numeros con un componente real y uno imaginario</td>
+              <td>(9-3j) <br>(2.5+6.4j)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- DIAPOSITIVA 6-->
+      <section id="slide_6">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Nombre</th>
+              <th>Descripcion</th>
+              <th>Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Booleano</td>
+              <td>bool</td>
+              <td>Representacion de los valores logicos Verdadero o Falso</td>
+              <td>True <br> False</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- DIAPOSITIVA 7-->
+      <section id='slide_7'>
+        <h2>Cadenas de Caracteres</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tipos</th>
+              <th>Nombres</th>
+              <th>Descripcion</th>
+              <th>Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cadenas</td>
+              <td>str</td>
+              <td>Expresiones (texto) formadas por caracteres. Se pueden representar</td>
+              <td>'Hola' <br> "Hola Mundo"</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- DIAPOSITIVA 8-->
+      <section id='slide_8'>
+        <h2>
+          Definición y asignación de variables
+        </h2>
+      </section>
+
+      <!-- DIAPOSITIVA 9-->
+      <section id='slide_9'>
+        <h3>VARIABLES</h3>
+        <li>
+          Una <em>variable</em> es una referencia a una dirección en memoria RAM, cuyo valor puede cambiar durante un cálculo o en la resolución de un problema.
+        </li>
+        <li>
+          A través de las variables se puede almacenar, organizar y manipular la información en la memoria (RAM).
+        </li>
+        <div style='border: solid black 1px; width: 200px; height: 100px; float:left'>120.15</div><p><== Memoria Ram</p>
+      </section>
+
+			<!-- DIAPOSITIVA 10-->
+			<section id="slide_10">
+			  <h2>Buenas Practicas para nombres de variables</h2>
+        <p>
+          – Elegir un nombre significativo que tenga relación con el dato que representará. <br>
+          – Se debe mantener consistencia en el estilo a utilizar en nombres que contengan más de una palabra, por ejemplo:fecha_actual  o  fechaActual <br>
+          – Seguir las tradiciones de lenguaje, por ejemplo que el nombre de la variable inicie con una letra minúscula. <br>
+          – No elegir nombres demasiado largos que podrían ocasionar problemas. Mantener un máximo de 15 caracteres. <br>
+        </p>
+      </section>
+
+        <!-- DIAPOSITIVA 11-->
+        <section id="slide11">
+          <h2>Buenas Practicas para nombres de variables</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Incorrecto</th>
+                <th>Correcto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>variable</td>
+                <td>edad</td>
+              </tr>
+              <tr>
+                <td>A<br>B</td>
+                <td>deposito <br> retiro</td>
+              </tr>
+              <tr>
+                <td>1numero <br>2numero</td>
+                <td>numero1 <br>numero2</td>
+              </tr>
+              <tr>
+                <td>caso-1 <br>caso_1</td>
+                <td>caso-2 <br>caso_2</td>
+              </tr>
+              <tr>
+                <td><label for="" style='color:blue;'>input</label></td>
+                <td>entrada</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- DIAPOSITIVA 12-->
+        <section id="slide_12">
+          <h3>Operacion de asignacion</h3>
+          <li>Esta operación se utiliza para definir variables y asignar un valor a su contenido.</li>
+          <li>Se efectúa de derecha a izquierda. Si hay operaciones, éstas se calculan, luego se asigna el resultado a la variable.</li>
+          <li>Cualquier valor que haya tenido la variable antes de la asignación, se pierde y es sobrescrito con el nuevo valor.</li>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Espacion en memoria</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  saldo
+                </td>
+                <td>120.15</td>
+                <td> ====> saldo = 120.15</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- DIAPOSITIVA 13-->
+        <section id="slide13">
+          <h2>OTRAS ASIGNACIONES</h2>
+          <li><label for="">Asignación en la misma línea: base = 5;  altura = base + 2;  area = base * altura</label></li>
+          <li><label for="">Asignación múltiple:base,  altura = 5,7	!	base = 5 y altura = 7</label></li>
+          <li><label for="">Asignación del mismo valor:base = altura = 2.5	!	base = 2.5 y altura =2.5</label></li>
+          <li><label for=""></label>Asignación de intercambio:base, altura = altura, base	!  base contendrá el valor de altura y viceversa</li>
+        </section>
+
+        <!-- DIAPOSITIVA 14-->
+        <section id="slide_14">
+          <h1>Manejo de entrada y salida</h1>
+        </section>
+
+        <!-- DIAPOSITIVA 15-->
+        <section id="slide_15">
+          <h1>Salida de datos</h1>
+          <li>La instrucción para la salida de datos es print, la cual puede recibir cadenas de caracteres o variables, según lo que se desea mostrar por pantalla:</li>
+          <pre><code class="hlpy" style="font-size= 30px;" data-trim contenteditable>
+print("Hola Mundo")
+suma = 20
+print(suma)
+          </code></pre>
+        </section>
+
+        <!-- DIAPOSITIVA 16-->
+        <section id="slide_16">
+          <h2>Secuencias de Escape</h2>
+          <li>Se utilizan para presentar por la pantalla caracteres especiales.</li>
+          <table>
+            <thead>
+              <tr>
+                <th>Secuencia</th>
+                <th>Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>\\</td>
+                <td>Muestra el caracter backslash</td>
+              </tr>
+              <tr>
+                <td>\'</td>
+                <td>Muesta el caracter de comilla simple</td>
+              </tr>
+              <tr>
+                <td>\"</td>
+                <td>Muesta el caracter de comilla doble</td>
+              </tr>
+              <tr>
+                <td>\a</td>
+                <td>Sonido de alerta</td>
+              </tr>
+              <tr>
+                <td>\n</td>
+                <td>Nueva linea. Coloca el cursor al inicio de la tabulacion</td>
+              </tr>
+              <tr>
+                <td>\t</td>
+                <td>Mueve el cursor avanzando en la misma</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- DIAPOSITIVA 17-->
+        <section id="slide_17">
+          <h2>Formatos de Salida</h2>
+          <div>
+            <p>
+              <li style='text-align: left;'><label for="">Mostrar comillas dentro de un string.</label></li>
+              <li style='text-align: left;'><label for="">Escribir múltiples valores en un solo string</label>.</li>
+              <li style='text-align: left;'><label for="">Escribir un string separado en múltiples líneas.</label></li>
+              <li style='text-align: left;'><label for="">Especificar el final de un string con <em>end</em>.</label></li>
+              <li style='text-align: left;'><label for="">Mostrar un string en múltiples líneas utilizando triple comillas</label></li>
+              <li style='text-align: left;'><label for="">Concatenar strings con el operador +</label></li>
+            </p>
+          </div>
+        </section>
+        <section>
+    <h2>Some Slide</h2>
+
+    <aside class="notes">
+        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+    </aside>
+</section>
+			</section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: false,
+      center: true,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      dependencies: [
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      ]
+    });
+  </script>
+</body>
+</html>

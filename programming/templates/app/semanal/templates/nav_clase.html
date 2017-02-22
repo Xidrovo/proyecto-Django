@@ -1,0 +1,59 @@
+<h3 class='titulo-escogida'>{[{clase_escogida.id}]} {[{clase_escogida.descripcion}]}</h3>
+
+<ul class="nav nav-pills">
+  <div class="row">
+    <a data-toggle="pill" href="#diapos">
+      <div data-balloon="dispositivas" data-ballon-length="small" data-balloon-pos="down" class="col-xs-2 menu-content" align="center">
+        <li>
+          <i class="fa fa-file-powerpoint-o fa-lg"></i>
+        </li>
+      </div>
+    </a>
+    <a data-toggle="pill" href="#lectura">
+      <div data-balloon="lectura" data-ballon-length="small" data-balloon-pos="down" class="col-xs-2 menu-content" align="center">
+            <i class="fa fa-book fa-lg"></i>
+      </div>
+    </a>
+    <a data-toggle="pill" href="#taller">
+      <div data-balloon="taller" data-ballon-length="small" data-balloon-pos="down" class="col-xs-2 menu-content" align="center"><i class="fa fa-laptop fa-lg"></i></div>
+    </a>
+    <a data-toggle="pill" href="#practica">
+      <div data-balloon="practica" data-ballon-length="small" data-balloon-pos="down" class="col-xs-2 menu-content" align="center"><i class="fa fa-terminal fa-lg"></i></div>
+    </a>
+    <a data-toggle="pill" href="#ejercicio">
+      <div data-balloon="ejercicio" data-ballon-length="small" data-balloon-pos="down" class="col-xs-2 menu-content" align="center"><i class="fa fa-pencil-square-o fa-lg"></i></div>
+    </a>
+    <a data-toggle="pill" href="#video">
+      <div data-balloon="video" data-ballon-length="small" data-balloon-pos="down" class="col-xs-2 menu-content" align="center"><i class="fa fa-film fa-lg"></i></div>
+    </a>
+  </div>
+</ul>
+
+<div class="container clase-contenedor">
+  <div class="tab-content">
+    <div id="diapos" class="tab-pane fade">
+      <h4>Diapositivas</h4>
+      <div ng-include src="'./templates/contenidos/diapositivas.html'"></div>
+    </div>
+    <div id="lectura" class="tab-pane fade">
+      <h4>Lectura</h4>
+      <div ng-include src="'./templates/contenidos/lecturas.html'"></div>
+    </div>
+    <div id="taller" class="tab-pane fade">
+      <h4>Taller</h4>
+      <div ng-include src="'./templates/contenidos/talleres.html'"></div>
+    </div>
+    <div id="practica" class="tab-pane fade">
+      <h4>Practica</h4>
+      <div ng-include src="'./templates/contenidos/practicas.html'"></div>
+    </div>
+    <div id="ejercicio" class="tab-pane fade">
+      <h4>Ejercicio</h4>
+      <div ng-include src="'./templates/contenidos/ejercicios.html'"></div>
+    </div>
+    <div id="video" class="tab-pane fade">
+      <h4>Video</h4>
+      <div ng-include src="'./templates/contenidos/videos.html'"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,503 @@
+{
+	"actividades": [
+    {
+      "semana": "1",
+      "clases": [
+        {
+          "id": "1.1",
+          "fecha": "02-05-2016",
+          "clase": "1",
+          "capitulo": "1",
+          "descripcion": "Introduccion a la programacion",
+          "lectura":"",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": true,
+          "deber": false,
+          "proyecto": false
+        },{
+          "id": "1.2",
+          "fecha": "02-05-2016",
+          "clase": "2",
+          "capitulo": "2",
+          "descripcion": "Variables y Tipos de datos",
+          "lectura": "Usando el intérprete de python (Pag 5-12) (1)",
+          "control-lectura":true,
+          "leccion": false,
+          "taller": true,
+          "deber": true,
+          "proyecto": false
+        }
+      ]
+    },
+    {
+      "semana": "2",
+      "clases":
+      [
+        {
+          "id": "2.1",
+          "fecha": "09-05-2016",
+          "clase": "1",
+          "capitulo": "2",
+          "descripcion": "Variables y Tipos de datos",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },{
+          "id": "2.2",
+          "fecha": "09-05-2016",
+          "clase": "2",
+          "capitulo": "3",
+          "descripcion": "Estructuras de control",
+          "lectura": "Mas Herramientas para control de flujo(Pag-16-18(1))",
+          "control-lectura":true,
+          "leccion": true,
+          "taller": false,
+          "deber": true,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "3",
+      "clases": [
+        {
+          "id": "3.1",
+          "fecha": "16-05-2016",
+          "clase": "1",
+          "capitulo": "3",
+          "descripcion": "Estructuras de control",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "3.2",
+          "fecha": "16-05-2016",
+          "clase": "2",
+          "capitulo": "3",
+          "descripcion": "Estructuras de control",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": true,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "4",
+      "clases": [
+        {
+          "id": "4.1",
+          "fecha": "23-05-2016",
+          "clase": "1",
+          "capitulo": "4",
+          "descripcion": "Listas",
+          "lectura": "Listas (Pag 13-14 hasta 'Pasos hacia la programacion', 16-17,27,28) (1)",
+          "control-lectura":true,
+          "leccion": false,
+          "taller": false,
+          "deber": true,
+          "proyecto": false
+        },
+        {
+          "id": "4.2",
+          "fecha": "23-05-2016",
+          "clase": "2",
+          "capitulo": "4",
+          "descripcion": "Listas",
+          "lectura": "Listas (Pag 13-14 hasta 'Pasos hacia la programacion', 16-17,27,28) (1)",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "5",
+      "clases": [
+        {
+          "id": "5.1",
+          "fecha": "30-05-2016",
+          "clase": "1",
+          "capitulo": "4",
+          "descripcion": "Listas",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "5.2",
+          "fecha": "30-05-2016",
+          "clase": "2",
+          "capitulo": "4",
+          "descripcion": "Listas",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": true,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "6",
+      "clases": [
+        {
+          "id": "6.1",
+          "fecha": "06-06-2016",
+          "clase": "1",
+          "capitulo": "5",
+          "descripcion": "Arreglos N-dimensionales",
+          "lectura": "An introduction to Numpy and Scipy (Pag 3, 4,5,7-15) (5)",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": true,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "6.2",
+          "fecha": "06-06-2016",
+          "clase": "2",
+          "capitulo": "5",
+          "descripcion": "Arreglos N-dimensionales",
+          "lectura": "An introduction to Numpy and Scipy (Pag 3, 4,5,7-15) (5)",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "7",
+      "clases": [
+        {
+          "id": "7.1",
+          "fecha": "13-06-2016",
+          "clase": "1",
+          "capitulo": "5",
+          "descripcion": "Arreglos N-dimensionales",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "7.2",
+          "fecha": "13-06-2016",
+          "clase": "2",
+          "capitulo": "5",
+          "descripcion": "Arreglos N-dimensionales",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": true,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "8",
+      "clases": [
+        {
+          "id": "8.1",
+          "fecha": "20-06-2016",
+          "clase": "1",
+          "capitulo": "5",
+          "descripcion": "Arreglos N-dimensionales",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "8.2",
+          "fecha": "20-06-2016",
+          "clase": "2",
+          "capitulo": "5",
+          "descripcion": "Arreglos N-dimensionales",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": true
+        }
+      ]
+    },{
+      "semana": "9",
+      "clases": [
+        {
+          "id": "9.1",
+          "fecha": "04-07-2016",
+          "clase": "1",
+          "capitulo": "6",
+          "descripcion": "Funciones",
+          "lectura": "Definiendo Funciones (Pag 19-24) (1)",
+          "control-lectura":true,
+          "leccion": false,
+          "taller": false,
+          "deber": true,
+          "proyecto": false
+        },
+        {
+          "id": "9.2",
+          "fecha": "04-07-2016",
+          "clase": "2",
+          "capitulo": "6",
+          "descripcion": "Funciones",
+          "lectura": "Definiendo Funciones (Pag 19-24) (1)",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "10",
+      "clases": [
+        {
+          "id": "10.1",
+          "fecha": "11-07-2016",
+          "clase": "1",
+          "capitulo": "6",
+          "descripcion": "Funciones",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "10.2",
+          "fecha": "11-07-2016",
+          "clase": "2",
+          "capitulo": "6",
+          "descripcion": "Funciones",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": true,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "11",
+      "clases": [
+        {
+          "id": "11.1",
+          "fecha": "18-07-2016",
+          "clase": "1",
+          "capitulo": "6",
+          "descripcion": "Funciones",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "11.2",
+          "fecha": "18-07-2016",
+          "clase": "2",
+          "capitulo": "7",
+          "descripcion": "Colecciones",
+          "lectura": "Tuplas y secuencias (Pag 31-33) (1)",
+          "control-lectura":true,
+          "leccion": false,
+          "taller": false,
+          "deber": true,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "12",
+      "clases": [
+        {
+          "id": "12.1",
+          "fecha": "25-07-2016",
+          "clase": "1",
+          "capitulo": "7",
+          "descripcion": "Colecciones",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "12.2",
+          "fecha": "25-07-2016",
+          "clase": "2",
+          "capitulo": "7",
+          "descripcion": "Colecciones",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": true,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "13",
+      "clases": [
+        {
+          "id": "13.1",
+          "fecha": "01-08-2016",
+          "clase": "1",
+          "capitulo": "8",
+          "descripcion": "Archivos",
+          "lectura": "Leyendo y escribiendo archivos (Pag 46-49) (1)",
+          "control-lectura":true,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "13.2",
+          "fecha": "01-08-2016",
+          "clase": "2",
+          "capitulo": "8",
+          "descripcion": "Archivos",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "14",
+      "clases": [
+        {
+          "id": "14.1",
+          "fecha": "08-08-2016",
+          "clase": "1",
+          "capitulo": "8",
+          "descripcion": "Archivos",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "14.2",
+          "fecha": "08-08-2016",
+          "clase": "2",
+          "capitulo": "9",
+          "descripcion": "Procesamiento de datos",
+          "lectura": "Importing data using pandas (Pag 99-107) (1)",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": false,
+          "deber": true,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "15",
+      "clases": [
+        {
+          "id": "15.1",
+          "fecha": "15-08-2016",
+          "clase": "1",
+          "capitulo": "9",
+          "descripcion": "Procesamiento de datos",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "15.2",
+          "fecha": "15-08-2016",
+          "clase": "2",
+          "capitulo": "9",
+          "descripcion": "Procesamiento de datos",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": true,
+          "taller": true,
+          "deber": false,
+          "proyecto": false
+        }
+      ]
+    },{
+      "semana": "16",
+      "clases": [
+        {
+          "id": "16.1",
+          "fecha": "22-08-2016",
+          "clase": "1",
+          "capitulo": "9",
+          "descripcion": "Procesamiento de datos",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": false
+        },
+        {
+          "id": "16.2",
+          "fecha": "22-08-2016",
+          "clase": "2",
+          "capitulo": "9",
+          "descripcion": "Procesamiento de datos",
+          "lectura": "",
+          "control-lectura":false,
+          "leccion": false,
+          "taller": false,
+          "deber": false,
+          "proyecto": true
+        }
+      ]
+    }
+	],
+  "bibliografia":{
+    "basica": [
+      {
+        "autores": "Van Rossum, G",
+        "fecha-publicacion": "2015",
+        "nombre": "El tutorial de Python",
+        "editorial": "Traducido y empaquetado por la comunidad de Python Argentina",
+        "link": ""
+      }
+    ],
+    "complementaria": [
+      {
+
+      },{
+
+      }
+    ]
+  }
+}

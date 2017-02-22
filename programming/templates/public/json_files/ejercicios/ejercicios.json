@@ -1,0 +1,60 @@
+[
+	{
+		"id": "1",
+    "autor": "aavendan@espol.edu.ec",
+		"titulo": "Variables y operadores",
+		"descripcion": "Conocer lo basico de asignacion de variables",
+		"etiquetas": [
+			"variables",
+			"asignacion",
+			"operadores"
+		],
+		"porcentaje_resueltos": "50",
+		"nivel_dificultad": 1
+	},{
+		"id": "2",
+    "autor": "rabonilla@espol.edu.ec",
+		"titulo": "Numpy",
+		"descripcion": "Ejercicios de numpy",
+		"etiquetas": [
+			"numpy",
+			"listas"
+		],
+		"porcentaje_resueltos": "30",
+		"nivel_dificultad": 2
+	},{
+		"id": "3",
+    "autor": "ancalder@espol.edu.ec",
+		"titulo": "Listas",
+		"descripcion": "Listas y su uso",
+		"etiquetas": [
+			"listas",
+			"basico"
+		],
+		"porcentaje_resueltos": "20",
+		"nivel_dificultad": 3
+	},{
+		"id": "4",
+    "autor": "rabonilla@espol.edu.ec",
+		"titulo": "Loops",
+		"descripcion": "Conocer diferentes control",
+		"etiquetas": [
+			"loops",
+			"for",
+      "while"
+		],
+		"porcentaje_resueltos": "10",
+		"nivel_dificultad": 2
+	},{
+		"id": "5",
+    "autor": "ancalder@espol.edu.ec",
+		"titulo": "Condicionales",
+		"descripcion": "Diferentes condicionales",
+		"etiquetas": [
+			"condicionales",
+			"if"
+		],
+		"porcentaje_resueltos": "0",
+		"nivel_dificultad": 5
+	}
+]
