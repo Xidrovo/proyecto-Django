@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.utils import timezone
-from programacion.models import Noticia, Profesor
+from programacion.models import Noticia, Profesor, Paralelo
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.views.decorators.csrf import csrf_exempt
+from django.db import connection
 # Create your views here.
+def index(request):
+	return render_to_response('index.html')
 
 def noticias(request):
 	noticias = Noticia.objects.order_by('-fecha_publicacion')
@@ -26,6 +29,13 @@ def crearNoticia(request):
 	else:
 		return redirect('/')
 
+def cursos(request):
+	profesor = Profesor.objects.all()
+	paralelos = Paralelo.objects.all()
+
+	cantidad = paralelos.query.group_by = ['paralelo']
+	cantidad = paralelos.count()
+	return render_to_response('cursos.html',{'profesor':profesor, 'cantidad': cantidad})
 #titulo, descripcion, fecha, tag, img_url, estudiante, prof
 
 '''

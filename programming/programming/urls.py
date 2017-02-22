@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from programacion.views import noticias, crearNoticia
+from programacion.views import noticias, crearNoticia, index, cursos
 admin.autodiscover()
 urlpatterns = [
+	url(r'^$', index, name = "index"),
     url(r'^noticias/$', noticias, name = "noticias"),
-    url(r'^nueva_noticia$',crearNoticia, name = "crearNoticia"), 
+    url(r'^nueva_noticia$',crearNoticia, name = "crearNoticia"),
+    url(r'^cursos/$', cursos, name = "cursos"),
 ]
