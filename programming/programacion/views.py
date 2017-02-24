@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.utils import timezone
-from programacion.models import Noticia, Profesor, Paralelo
+from programacion.models import *
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.db import connection
@@ -29,19 +29,24 @@ def crearNoticia(request):
 	else:
 		return redirect('/')
 
-def cursos(request):
-	profesor = Profesor.objects.all()
-	paralelos = Paralelo.objects.all()
+def perfil (request, persona_id):
+	perfil = get_object_or_404(Estudiante, pk = persona_id)
+	return render_to_response('perfil.html',
+				{'perfil':perfil})
 
-	cantidad = paralelos.query.group_by = ['paralelo']
-	cantidad = paralelos.count()
-	return render_to_response('cursos.html',{'profesor':profesor, 'cantidad': cantidad})
-#titulo, descripcion, fecha, tag, img_url, estudiante, prof
+def perfilProfesor (request, persona_id):
+	perfil = get_object_or_404(Profesor, pk = persona_id)
+	return render_to_response('perfilProf.html',
+				{'perfil':perfil})
 
-'''
-	correo = models.CharField(max_length = 100)
-	password = models.TextField()
-	nombre = models.CharField(max_length = 50)
-	apellido = models.CharField(max_length = 50)
-	cedula = models.CharField(max_length = 10, primary_key = True)
-'''
+def cursos (request):
+	curso = Curso.objects.get(id=1)
+	syllabus = Syllabus.objects.all()
+
+	return render_to_response('cursos.html',
+				{'curso':curso, 'syllabus':syllabus})
+
+def semana (request):
+	clases = Clase.objects.all()
+	return render_to_response('semanal.html',
+				{'clases':clases})

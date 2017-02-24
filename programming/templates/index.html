@@ -7,9 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- Dependencias css-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="{% static "public/css/index.css" %}">
-	<link rel="stylesheet" type="text/css" href="public/css/custom-navbar.css">
+	<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/custom-navbar.css" %}">	
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
 	<!---->
 	<title>Fundamentos de programación</title>
 </head>
@@ -23,13 +24,14 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>                        
 			      </button>
-			      <a class="navbar-brand" href="#">ESPOL</a>
+			      <a class="navbar-brand" href="/">ESPOL</a>
 			    </div>
 			    <div class="collapse navbar-collapse myNavbar" id="myNavbar">
 			      <ul class="nav navbar-nav">
-			        <li class="espol"><a href="index.html">Inicio</a></li>
+			        <li class="espol"><a href="/">Inicio</a></li>
 			        <li class="espol"><a href="/noticias">Noticias</a></li>
-			        <li class="espol"><a href="app/semanal/semanal.html">Semana a Semana</a></li>
+			        <li class="espol"><a href="/cursos">Curso</a></li>
+			        <li class="espol"><a href="/semanal">semana a semana</a></li>
 			        <li class="espol"><a href="app/equipo/equipo.html">Equipo</a></li>
 			        <li class="espol"><a href="app/ayudantias/ayudantias.html">Ayudantías</a></li>
 			        <li class="espol"><a href="#">Sandbox</a></li>
@@ -112,9 +114,9 @@
 	</div>
 
 	<footer>
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-		<script src="components/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="public/js/index.js"></script>
+		<script src="{% static "jquery/dist/jquery.js" %}"></script>
+		<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+		<script src="{% static "js/index.js" %}"></script>
 	</footer>
 </div>
 </body>

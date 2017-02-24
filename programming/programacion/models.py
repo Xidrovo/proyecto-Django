@@ -38,4 +38,17 @@ class Noticia(models.Model):
 	profesor_creador = models.ForeignKey(Profesor, null = True)
 	estudiante_creador = models.ForeignKey(Estudiante, null = True)
 
+class Curso(models.Model):
+	descrpcion = models.TextField()
+	requisitos = models.CharField(max_length = 100)
+	politicas = models.TextField()
+	
+class Syllabus(models.Model):
+	titulo = models.CharField(max_length = 200)
+	descrpcion = models.TextField()
+
+class Clase(models.Model):
+	titulo = models.CharField(max_length = 200)
+	video = models.CharField(max_length = 200)
+	descrpcion = models.TextField()
 #manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)

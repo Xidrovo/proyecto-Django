@@ -78,32 +78,25 @@
 		  </div>
 		</nav>
 	</header>
-	<div class = "container">
-		<h1>Noticias</h1>
-		{% for noticia in noticias %}
-		<article>
-			<h2>{{ noticia.titulo }}</h2>
-			<div class = "info">
-				<p class = "date"> {{noticia.fecha_publicacion}}</p>
-				<p class = "news">{{ noticia.descrpcion }}</p>
-				<p class="tags">tags: {{noticia.tags}}</p>
+<div class="container">
+	{% autoescape off %}
+	{%for clase in clases%}
+		<button type="button" class="btn btn-link" data-toggle="collapse" data-target=#{{clase.id}}>
+			{{clase.titulo}}
+		</button> 
+		<div id={{clase.id}} class="collapse">
+			<p>{{clase.descrpcion}}</p>
+			<div class="embed-responsive embed-responsive-16by9">
+			 	<iframe class="embed-responsive-item" src="{{clase.video}}"></iframe>
 			</div>
-		</article>
-		{% endfor %}
-
-		<h2>¿Agregar una nueva noticia?</h2>
-		<form action = "/nueva_noticia" method="post">
-			{% csrf_token %}
-			<p>Titulo</p>
-			<input type="text"  class="form-control" name="titulo"><br>
-			<p>Descripcion</p>
-			<textarea name="descripcion"  class="form-control" cols="40" rows="5"></textarea><br>
-			<p>Tags</p>
-			<input type="text" class="form-control" name="tag"><br>
-			<input type="submit" class="btn btn-primary" value="submit">
-		</form>
-	</div>
-	<script src="{% static "jquery/dist/jquery.js" %}"></script>
-	<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+		</div>
+		<br>
+	{%endfor%}
+	{% endautoescape %}
+</div>
+	<footer>
+		<script src="{% static "jquery/dist/jquery.js" %}"></script>
+		<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+	</footer>
 </body>
 </html>

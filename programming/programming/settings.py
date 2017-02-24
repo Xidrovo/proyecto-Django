@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'programming.urls'
 
 TEMPLATES = [
@@ -130,4 +131,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components' )
+BOWER_COMPONENTS_ROOT = os.path.join(os.path.join(PROJECT_ROOT), 'components' )

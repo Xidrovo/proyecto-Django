@@ -15,11 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from programacion.views import noticias, crearNoticia, index, cursos
+from programacion.views import *
+from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
+
 admin.autodiscover()
 urlpatterns = [
 	url(r'^$', index, name = "index"),
+	url(r'^login/$', auth_views.login, name='login'),
+    url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^noticias/$', noticias, name = "noticias"),
     url(r'^nueva_noticia$',crearNoticia, name = "crearNoticia"),
     url(r'^cursos/$', cursos, name = "cursos"),
+    url(r'^perfil/(?P<persona_id>\d+)/$', perfil, name="persona_id"),
+    url(r'^perfil/profeshor/(?P<persona_id>\d+)/$', perfilProfesor, name="persona_id"),
+    url(r'^semanal/$', semana, name = "semana"),
 ]
+
+#url(r'^preguntas/(?P<pregunta_id>\d+)/$', pregunta_detalle, name="pregunta_detalle"),
