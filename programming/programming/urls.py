@@ -23,14 +23,19 @@ from django.conf.urls.static import static
 admin.autodiscover()
 urlpatterns = [
 	url(r'^$', index, name = "index"),
-	url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
+    #Sección de noticias
     url(r'^noticias/$', noticias, name = "noticias"),
     url(r'^nueva_noticia$',crearNoticia, name = "crearNoticia"),
+    #Para visualizar todo lo que tenga que ver con los cursos.
     url(r'^cursos/$', cursos, name = "cursos"),
+    #useless one
     url(r'^perfil/(?P<persona_id>\d+)/$', perfil, name="persona_id"),
     url(r'^perfil/profeshor/(?P<persona_id>\d+)/$', perfilProfesor, name="persona_id"),
+    #Para los templates de semanal
     url(r'^semanal/$', semana, name = "semana"),
+    url(r'^eliminarClase$',eliminarClase, name = "eliminarClase"),
+    url(r'^edit_clase$',edit_clase, name = "edit_clase"),
+    url(r'^nueva_clase$',crearClase, name = "crearClase"),
 ]
 
 #url(r'^preguntas/(?P<pregunta_id>\d+)/$', pregunta_detalle, name="pregunta_detalle"),

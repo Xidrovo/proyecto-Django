@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Noticias</title>
 	{% load static %}
 	<link href="{% static "bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
-	<link rel="stylesheet" type="text/css" href="{% static "css/custom-navbar.css" %}">	
+	<link rel="stylesheet" type="text/css" href="{% static "css/custom-navbar.css" %}">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
 </head>
 <body>
 	<header>		
@@ -81,22 +86,61 @@
 <div class="container">
 	{% autoescape off %}
 	{%for clase in clases%}
-		<button type="button" class="btn btn-link" data-toggle="collapse" data-target=#{{clase.id}}>
+	<article class="articulo{{clase.id}}">
+		<button type="button" class="btn btn-link title{{clase.id}}" data-toggle="collapse" data-target=#{{clase.id}}>
 			{{clase.titulo}}
 		</button> 
 		<div id={{clase.id}} class="collapse">
-			<p>{{clase.descrpcion}}</p>
+			<ul class="nav navbar-nav pull-right">
+					        <form action="/eliminarClase" method="post">
+					        	{% csrf_token %}
+					        	<input type="submit" class="btn btn-link" value="[Eliminar]">
+					        	<input type="text" name="id" value={{clase.id}} readonly>					        	
+					        </form>
+					        <input type="submit" class="btn btn-link edit" id="{{clase.id}}" value="[editar]">
+			</ul>
+			<p class="info{{clase.id}}">{{clase.descrpcion}}</p>
 			<div class="embed-responsive embed-responsive-16by9">
-			 	<iframe class="embed-responsive-item" src="{{clase.video}}"></iframe>
+			 	<iframe class="embed-responsive-item video{{clase.id}}" src="{{clase.video}}"></iframe>
 			</div>
 		</div>
 		<br>
+	</article>
 	{%endfor%}
+	<br><hr><br>
+	<h2>¿Subir nuevo curso?</h2>
+	<form action = "/nueva_clase" method="post">
+			{% csrf_token %}
+			<p>Titulo</p>
+			<input type="text"  class="form-control" name="titulo"><br>
+			<p>Descripcion</p>
+			<textarea name="descripcion"  class="form-control" cols="40" rows="5"></textarea><br>
+			<p>url-video</p>
+			<input type="text" class="form-control" name="video"><br>
+			<input type="submit" class="btn btn-primary" value="submit">
+		</form>
 	{% endautoescape %}
 </div>
 	<footer>
 		<script src="{% static "jquery/dist/jquery.js" %}"></script>
 		<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+		<script src="{% static "js/admin.js" %}"></script>
 	</footer>
 </body>
 </html>
+
+<!--- 
+
+<form action = "/nueva_noticia" method="post">
+	{% csrf_token %}
+	<p>Titulo</p>
+	<input type="text"  class="form-control" name="titulo"><br>
+	<p>Descripcion</p>
+	<textarea name="descripcion"  class="form-control" cols="40" rows="5"></textarea><br>
+	<p>Tags</p>
+	<input type="text" class="form-control" name="tag"><br>
+	<input type="submit" class="btn btn-primary" value="submit">
+</form>
+
+-->
