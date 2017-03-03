@@ -9,9 +9,22 @@ from django.db import connection
 def index(request):
 	return render_to_response('index.html')
 
+#.::NOTICIAS::.
+#--------------------------------------------------------------
 def noticias(request):
 	noticias = Noticia.objects.order_by('-fecha_publicacion')
 	return render_to_response('noticias.html',{'noticias':noticias})
+
+@csrf_exempt
+def deleteNews(request):
+
+	if request.method == 'POST':
+		identificador	=	request.POST.get('id')
+		Noticia.objects.filter(id=identificador).delete()
+		return HttpResponseRedirect('noticias')
+	else:
+		return redirect('/')
+
 
 @csrf_exempt
 def crearNoticia(request):
@@ -39,6 +52,22 @@ def crearNoticia(request):
 	else:
 		return redirect('/')
 
+@csrf_exempt
+def editNews(request):
+
+	if request.method == 'POST':
+		noticia 				= 	Noticia.objects.get(pk = int(request.POST.get('identificador')))
+		noticia.titulo 			= 	request.POST.get('titulo')
+		noticia.descrpcion		= 	request.POST.get('descripcion')
+		noticia.tags 			=	request.POST.get('tags')
+
+		noticia.save()
+
+		return HttpResponseRedirect('noticias')
+	else:
+		return redirect('/')
+#--------------------------------------------------------------		
+#Useless part below here
 def perfil (request, persona_id):
 	perfil = get_object_or_404(Estudiante, pk = persona_id)
 	return render_to_response('perfil.html',
@@ -49,12 +78,71 @@ def perfilProfesor (request, persona_id):
 	return render_to_response('perfilProf.html',
 				{'perfil':perfil})
 
+#EVERYTHING ABOUT COURSES INSIDE HERE
+#--------------------------------------------------------------
 def cursos (request):
 	curso = Curso.objects.get(id=1)
 	syllabus = Syllabus.objects.all()
 
 	return render_to_response('cursos.html',
 				{'curso':curso, 'syllabus':syllabus})
+
+@csrf_exempt
+def syllDesc(request):
+
+	if request.method == 'POST':
+		curso 					=	Curso.objects.get(id=1)
+		curso.descrpcion		= 	request.POST.get('descripcion')
+
+		curso.save()
+
+		return HttpResponseRedirect('cursos')
+	else:
+		return redirect('/')
+
+@csrf_exempt
+def syllReq(request):
+
+	if request.method == 'POST':
+		curso 					=	Curso.objects.get(id=1)
+		curso.requisitos		= 	request.POST.get('requisitos')
+
+		curso.save()
+
+		return HttpResponseRedirect('cursos')
+	else:
+		return redirect('/')
+
+@csrf_exempt
+def syllPol(request):
+
+	if request.method == 'POST':
+		curso 					=	Curso.objects.get(id=1)
+		curso.politicas			= 	request.POST.get('politicas')
+
+		curso.save()
+
+		return HttpResponseRedirect('cursos')
+	else:
+		return redirect('/')
+
+@csrf_exempt
+def syll(request):
+
+	if request.method == 'POST':
+		syllabus 			= 	Syllabus.objects.get(pk = request.POST.get('identificador'))
+		syllabus.titulo		= 	request.POST.get('titulo')
+		syllabus.descrpcion =	request.POST.get('descripcion')
+
+		syllabus.save()
+
+		return HttpResponseRedirect('cursos')
+	else:
+		return redirect('/')
+
+
+#--------------------------------------------------------------
+#END HERE
 
 def semana (request):
 	clases = Clase.objects.all()
@@ -100,3 +188,12 @@ def crearClase(request):
 		return HttpResponseRedirect('semanal')
 	else:
 		return redirect('/')
+
+def Rankings(request):
+	return render_to_response('rankings.html')
+
+def Equipo(request):
+	return render_to_response('equipo.html')
+
+def Ayudantias(request):
+	return render_to_response('ayudantias.html')

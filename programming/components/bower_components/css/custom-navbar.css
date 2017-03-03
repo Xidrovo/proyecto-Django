@@ -1,0 +1,44 @@
+/*Navbar css*/
+		
+		#login{
+			width: 30px;
+			height: 30px;
+			border-radius: 100px;
+			border: 1px solid;
+			margin-left: auto;
+    		margin-right: auto;
+		}
+		
+		.navbar-default{
+		  background-color: rgba(255,255,255,0.5); 
+		  border-color: transparent;
+		  position: relative !important;
+		}
+		#myNavbar .btn{
+			background-color: transparent;
+			border-color: transparent;
+		}
+		.navbar-default .navbar-nav > li > a {
+		  color: #001c43;
+		}
+		ul.nav a:hover { background-color: rgba(0,255,255,0.3) !important; }
+		.modal-backdrop {
+			z-index: -1;
+		}
+		@media only screen and (max-width: 766px){
+			.navbar-default {
+				background-color: rgba(255,255,255,0.5);
+				border-color: transparent;
+				position: relative !important;
+				}
+			#myNavbar .btn{
+				position: relative;
+			    width: 100%;
+			}
+			#login{
+				width: 50px;
+				height: 50px;
+			}
+		}
+		
+		/*end Navbar css*/

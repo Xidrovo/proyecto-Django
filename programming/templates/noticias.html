@@ -9,6 +9,53 @@
 	<link href="{% static "bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
 	<link rel="stylesheet" type="text/css" href="{% static "css/custom-navbar.css" %}">	
+	<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">	
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Sansita" rel="stylesheet">
+	<style type="text/css">
+		.title{
+			color:gray;
+			font-family: 'Oswald', sans-serif;
+			margin-top: 0px;
+		}
+		.date{
+			color:gray;
+			font-family: 'Sansita', sans-serif;
+
+		}
+		.tags{
+			color: rgba(0, 153, 153, 0.8);
+		}
+		.fl{
+			float: left;
+			margin-right: 5px; 
+			color: grey;
+		}
+		.clearer{
+			clear:left;
+		}
+		.admn{
+			padding: 0px;
+			margin: 0px;
+		}
+		.news{
+			font-family: 'Roboto Condensed', sans-serif;
+			line-height: 250%;
+		}
+		footer p{
+			font-size: 0.5em;
+		}
+				.cool{
+			width:75%;
+		}
+		.cool2{
+			width: 50%;
+		}
+		.container{
+			background-color: rgba(255, 255, 255, 0.2);
+			margin-top: 0px;
+			border-radius: 100%;
+		}
+	</style>
 </head>
 <body>
 	<header>		
@@ -27,10 +74,10 @@
 		        	<li class="espol"><a href="/">Inicio</a></li>
 			        <li class="espol"><a href="/noticias">Noticias</a></li>
 			        <li class="espol"><a href="/cursos">Curso</a></li>
-			        <li class="espol"><a href="/semanal">semana a semana</a></li>
-			        <li class="espol"><a href="app/equipo/equipo.html">Equipo</a></li>
-			        <li class="espol"><a href="app/ayudantias/ayudantias.html">Ayudantías</a></li>
-			        <li class="espol"><a href="#">Sandbox</a></li>
+			        <li class="espol"><a href="/semanal">Semana a semana</a></li>
+			        <li class="espol"><a href="/equipo">Equipo</a></li>
+			        <li class="espol"><a href="/ayudantias">Ayudantías</a></li>
+			        <li class="espol"><a href="/rankings">Rankings</a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
 		        <li>
@@ -40,73 +87,119 @@
 					
 		        </li>
 		      </ul>
-		    <!--Modal para el PopUP de login-->
-					<div class="modal fade" id="myModal" role="dialog">
-					    <div class="modal-dialog">
-					    
-						      <!-- Modal content-->
-						    <div class="modal-content">
-						    	<div class="modal-header">
-						        	<button type="button" class="close" data-dismiss="modal"></button>
-						        	<h3 class="modal-title words">Login</h3>
-						    	</div>
-						    	<div class="modal-body">
-						    		<form>
-									    <div class="form-group">
-									      <label for="usr" class="words">Usuario:</label>
-									      <input type="text" class="form-control" id="usr">
-									    </div>
-									    <div class="form-group">
-									      <label for="pwd" class="words">Contraseña:</label>
-									      <input type="password" class="form-control" id="pwd">
-									    </div>
-									    <div class="checkbox">
-											<label><input type="checkbox" value="" class="words">No cerrar sesión</label>
-										</div>
-									  </form>
-						    	</div>
-						    	<div class="modal-footer">
-						    		<button type="button" class="btn btn-default inline pull-left" id="entrar">Entrar</button>
-						    		<button type="button" class="btn btn-default inline pull-right" data-dismiss="modal">Close</button>
-						    		<hr class="clearer">
-						    		<a href="/create" class="words"><h6>Crear una cuenta</h6></a>
-						    		<a href="app/misc/forgotPass.html" class="words"><h6>¿Olvidaste tu contraseña?</h6></a>
-						    	</div>
-							</div>
-					      
-						</div>
-					</div>
-						<!--Fin de la creación del modal-->
 		    </div>
 		  </div>
 		</nav>
 	</header>
+		<h1 class="text-center">Noticias</h1>
 	<div class = "container">
-		<h1>Noticias</h1>
+		<h3>¿Agregar una nueva noticia?</h3>
+		<button class="btn btn-link" data-toggle="modal" data-target="#newModal">Haz click aquí!</button>
+		<hr class="cool">
+		<hr class="cool2">
 		{% for noticia in noticias %}
-		<article>
-			<h2>{{ noticia.titulo }}</h2>
+		<article id=art{{noticia.id}}>
+			<ul class="nav navbar-nav pull-right">
+					        <form action="/deleteNews" method="post">
+					        	{% csrf_token %}
+					        	<input type="submit" class="btn btn-link admn" value="[Eliminar]">
+					        	<input type="text" name="id" value={{noticia.id}} readonly style="display:none;">
+					        </form>
+					        <input type="submit" class="btn btn-link edit admn" id="{{noticia.id}}" data-toggle="modal" data-target="#editModal" value="[editar]">
+			</ul>
+			<h2 class="text-justify title" id="title{{noticia.id}}">{{ noticia.titulo }}</h2>
 			<div class = "info">
-				<p class = "date"> {{noticia.fecha_publicacion}}</p>
-				<p class = "news">{{ noticia.descrpcion }}</p>
-				<p class="tags">tags: {{noticia.tags}}</p>
+				<p class = "date text-right" id="fecha{{noticia.id}}"> {{noticia.fecha_publicacion}}</p>
+				<p class = "news" id="desc{{noticia.id}}">
+					{{ noticia.descrpcion|linebreaksbr }}
+				</p>
+				<p class = "fl">tags:  </p>
+				<p class="tags" id="tags{{noticia.id}}">{{noticia.tags}}</p>
+				<span class = "clearer"></span>
 			</div>
+			<hr class="cool"><hr class="cool2">
 		</article>
 		{% endfor %}
 
-		<h2>¿Agregar una nueva noticia?</h2>
-		<form action = "/nueva_noticia" method="post">
-			{% csrf_token %}
-			<p>Titulo</p>
-			<input type="text"  class="form-control" name="titulo"><br>
-			<p>Descripcion</p>
-			<textarea name="descripcion"  class="form-control" cols="40" rows="5"></textarea><br>
-			<p>Tags</p>
-			<input type="text" class="form-control" name="tag"><br>
-			<input type="submit" class="btn btn-primary" value="submit">
-		</form>
 	</div>
-	<script src="{% static "jquery/dist/jquery.js" %}"></script>
-	<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+	<footer>
+		<!-- ..............................MODAL DE EDITAR ............................ -->
+<div id="editModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Editar noticia</h4>
+      </div>
+      <div class="modal-body">
+      		<form action = "/editNews" method="post">
+		        <input class="form-control hide" name="identificador"  id="m-id" value="" readonly>
+		        <h4 class="modal-title">Titulo</h4>
+		        <input class="form-control" name="titulo" value = "" id="m-title">
+		        <hr>
+		        <h4 class="modal-title">Noticia</h4>
+		        <textarea class="form-control" name="descripcion" cols = "40" rows="5" id="m-desc"></textarea>
+		        <hr><hr>
+		        <h4 class="modal-title">tags</h4>
+		        <input class="form-control" name="tags" value = "" id="m-tags">
+	        
+      </div>
+      <div class="modal-footer">
+		      	<input class = "btn btn-primary pull-left m-button" type="submit" value = "editar"></input>	
+		        <button type="button" class="btn btn-default m-button" data-dismiss="modal">cerrar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+		<!-- ..............................	FIN DE EDITAR ............................ -->
+
+	    <!-- ..............................MODAL DE AGREGAR ............................ -->
+<div id="newModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Nueva noticia</h4>
+      </div>
+      <div class="modal-body">
+      		<form action = "/nueva_noticia" method="post">
+				{% csrf_token %}
+				<h5 class="modal-title">Titulo</h5>
+				<input type="text"  class="form-control" name="titulo" placeholder="titulo"><br>
+				<h5 class="modal-title">Descripcion</h5>
+				<textarea name="descripcion"  class="form-control" cols="40" rows="5" placeholder="cuerpo de la noticia"></textarea><br>
+				<h5 class="modal-title">Tags</h5>
+				<input type="text" class="form-control" name="tag" placeholder="tags eg: tag1,tag2,tag3"><br>
+	        
+      </div>
+      <div class="modal-footer">
+		      	<input type="submit" class="btn btn-primary m-button" value="submit">	
+		        <button type="button" class="btn btn-default m-button" data-dismiss="modal">cerrar</button>
+	        </form>
+        </form>
+      </div>
+    </div>
+    <!-- ..............................	FIN DE EDITAR ............................ -->
+  </div>
+</div>
+
+		<p class="text-center">Integrantes: Xavier Idrovo, Joel Rodriguez, Edison Mora</p>
+		<script src="{% static "jquery/dist/jquery.js" %}"></script>
+		<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+		<script src="{% static "js/noticias.js" %}"></script>
+	</footer>
 </body>
 </html>
+
+<!-- 
+	$(ide.concat(" form")).append(
+		$("<input>",{"class":"btn btn-primary pull-right","type":"submit","value":"editar"}))
+	$(ide.concat(" form")).append(
+		$("<br> <br> <br>"))
+})
+-->

@@ -10,6 +10,13 @@
 	<link href="{% static "bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">	
 	<link rel="stylesheet" type="text/css" href="{% static "css/custom-navbar.css" %}">	
+	<style type="text/css">
+		body{
+			background-color: rgba(176, 190, 197, 0.5);
+		}
+
+		
+	</style>
 </head>
 <body>
 	<header>		
@@ -28,10 +35,10 @@
 				        <li class="espol"><a href="/">Inicio</a></li>
 				        <li class="espol"><a href="/noticias">Noticias</a></li>
 				        <li class="espol"><a href="/cursos">Curso</a></li>
-				        <li class="espol"><a href="/semanal">semana a semana</a></li>
-				        <li class="espol"><a href="app/equipo/equipo.html">Equipo</a></li>
-				        <li class="espol"><a href="app/ayudantias/ayudantias.html">Ayudantías</a></li>
-				        <li class="espol"><a href="#">Sandbox</a></li>
+				        <li class="espol"><a href="/semanal">Semana a semana</a></li>
+				        <li class="espol"><a href="/equipo">Equipo</a></li>
+				        <li class="espol"><a href="/ayudantias">Ayudantías</a></li>
+				        <li class="espol"><a href="/rankings">Rankings</a></li>
 			      	</ul>
 			      	<ul class="nav navbar-nav navbar-right">
 		        		<li>
@@ -40,46 +47,7 @@
 							</button>
 		        		</li>
 		      		</ul>
-		    		<!--Modal para el PopUP de login-->
-					<div class="modal fade" id="myModal" role="dialog">
-					    <div class="modal-dialog">
-					        <!-- Modal content-->
-						    <div class="modal-content">
-						    	<div class="modal-header">
-						        	<button type="button" class="close" data-dismiss="modal"></button>
-						        	<h3 class="modal-title words">Login</h3>
-						    	</div>
-						    	<div class="modal-body">
-						    		<form>
-									    <div class="form-group">
-										    <label for="usr" class="words">Usuario:</label>
-									      	<input type="text" class="form-control" id="usr">
-									    </div>
-									    <div class="form-group">
-									      	<label for="pwd" class="words">Contraseña:</label>
-									      	<input type="password" class="form-control" id="pwd">
-									    </div>
-									    <div class="checkbox">
-											<label><input type="checkbox" value="" class="words">No cerrar sesión</label>
-											<br>
-											<form action="">
-											  	<input type="radio" name="tipo" value="male">Estudiante<br>
-											  	<input type="radio" name="tipo" value="female">Profesor<br>
-											</form>
-										</div>
-									</form>
-						    	</div>
-						    	<div class="modal-footer">
-						    		<button type="button" class="btn btn-default inline pull-left" id="entrar">Entrar</button>
-						    		<button type="button" class="btn btn-default inline pull-right" data-dismiss="modal">Close</button>
-						    		<hr class="clearer">
-						    		<a href="#" class="words"><h6>Crear una cuenta</h6></a>
-						    		<a href="../../app/misc/forgotPass.html" class="words"><h6>¿Olvidaste tu contraseña?</h6></a>
-						    	</div>
-							</div>
-						</div>
-					</div>
-					<!--Fin de la creación del modal-->
+				</div>
 		    </div>
 		  </div>
 		</nav>
@@ -90,9 +58,12 @@
 		<div class="row featurette">
 			<div class="col-md-12 text-justify">
 				<h2 class="featurette-heading text-center">Descripción</h2>
-				<p class="lead">
-					{{ curso.descrpcion }}
-				</p>
+				<button type="button" class="btn btn-link pull-right" id="descripcion" data-toggle="modal" data-target="#editModal-desc">[Editar]</button><br><br>
+				<article class = "edit-descripcion">
+					<p class="lead">
+						{{ curso.descrpcion|linebreaksbr }}
+					</p>
+				</article>
 			</div>
 		</div>
 		<hr class="featurette-divider">
@@ -100,9 +71,12 @@
 		<div class="row featurette">
 			<div class="col-md-12 text-center">
 				<h2 class="featurette-heading ">Requisitos</h2>
-				<p class="lead">
-					<strong>Prerrequisito:</strong> {{curso.requisitos}}
-				</p>
+				<article class="edit-requisitos">
+					<button type="button" class="btn btn-link pull-right" id="requisitos" data-toggle="modal" data-target="#editModal-req">[Editar]</button><br><br>
+					<p class="lead">
+						{{curso.requisitos|linebreaksbr}}
+					</p>
+				</article>
 			</div>
 		</div>
 		<hr class="featurette-divider">
@@ -111,8 +85,12 @@
 			<div class="col-md-12" id="col-syllabus">
 				<h2 class="featurette-heading text-center">Syllabus</h2>
 					{%for syll in syllabus%}
-					<h3 class="text-center">{{syll.id}}. {{syll.titulo}}</h3>
-					<p class="text-justify">{{syll.descrpcion}}</p>
+					<article id="syll{{syll.id}}">
+						<button type="button" class="btn btn-link pull-right edit-syll" id={{syll.id}} data-toggle="modal" data-target="#editModal-syll">[Editar]</button><br><br>
+						<h3 class="text-center">{{syll.titulo}}</h3>
+						<p class="text-justify">{{syll.descrpcion|linebreaksbr}}</p>
+					</article>
+					<hr>
 					{%endfor%}
 			</div>
 		</div>
@@ -120,15 +98,130 @@
 		<!--POLITICAS-->
 		<div class="row featurette">
 			<div class="col-md-12">
-				<h2 class="featurette-heading text-center">Politicas</h2>
-				<p class="lead text-justify"> {{curso.politicas}}</p>
+				<article class = "edit-politicas">
+					<h2 class="featurette-heading text-center">Politicas</h2>
+					<button type="button" class="btn btn-link pull-right" id="politicas" data-toggle="modal" data-target="#editModal-pol">[Editar]</button><br><br>
+					<p class="lead text-justify"> {{curso.politicas|linebreaksbr}}</p>
+				</article>
 			</div>
 		</div>
 		<hr class="featurette-divider">
 	</div>
 	<footer>
+		<!-- ..............................MODAL DE EDITAR DESC ............................ -->
+	<div id="editModal-desc" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Editar</h4>
+	      </div>
+	      <div class="modal-body">
+	      		<form action = "/syllDesc" method="post" id="generalModal">
+			        <h4 class="modal-title">Descripción</h4>
+			        <textarea class="form-control" name="descripcion" cols = "40" rows="8" id="m-desc"></textarea>
+		        
+	      </div>
+	      <div class="modal-footer">
+			      	<input class = "btn btn-primary pull-left m-button" type="submit" value = "editar"></input>	
+			        <button type="button" class="btn btn-default m-button" data-dismiss="modal">cerrar</button>
+	        </form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+		<!-- ..............................	FIN DE EDITAR DESC  ............................ -->
+		<!-- ..............................MODAL DE EDITAR DESC ............................ -->
+	<div id="editModal-req" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Editar</h4>
+	      </div>
+	      <div class="modal-body">
+	      		<form action = "/syllReq" method="post" id="generalModal">
+			        <h4 class="modal-title">Requisitos</h4>
+			        <textarea class="form-control" name="requisitos" cols = "40" rows="5" id="m-req"></textarea>
+		        
+	      </div>
+	      <div class="modal-footer">
+			      	<input class = "btn btn-primary pull-left m-button" type="submit" value = "editar"></input>	
+			        <button type="button" class="btn btn-default m-button" data-dismiss="modal">cerrar</button>
+	        </form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+		<!-- ..............................	FIN DE EDITAR REQ  ............................ -->
+
+	<!-- ..............................MODAL DE EDITAR POLITICAS ............................ -->
+	<div id="editModal-pol" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Editar</h4>
+	      </div>
+	      <div class="modal-body">
+	      		<form action = "/syllPol" method="post" id="generalModal">
+			        <h4 class="modal-title">Requisitos</h4>
+			        <textarea class="form-control" name="politicas" cols = "40" rows="5" id="m-pol"></textarea>
+		        
+	      </div>
+	      <div class="modal-footer">
+			      	<input class = "btn btn-primary pull-left m-button" type="submit" value = "editar"></input>	
+			        <button type="button" class="btn btn-default m-button" data-dismiss="modal">cerrar</button>
+	        </form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+		<!-- ..............................	FIN DE EDITAR POLITICAS  ............................ -->
+
+	<!-- ..............................MODAL DE EDITAR SYLLABUS ............................ -->
+	<div id="editModal-syll" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Editar</h4>
+	      </div>
+	      <div class="modal-body">
+	      		<form action = "/syll" method="post" id="generalModal">
+	      		<input class = "form-control hide" value="" name="identificador" readonly="" id="m-id">
+		        <h4 class="modal-title">Titulo</h4>
+		        <input class="form-control" value = "" name = "titulo" id="m-title-syll">
+		        <hr>
+		        <h4 class="modal-title">Descripción</h4>
+		        <textarea class="form-control" name="descripcion" cols = "40" rows="8" id="m-desc-syll"></textarea>
+		        <hr><hr>
+		        
+	      </div>
+	      <div class="modal-footer">
+			      	<input class = "btn btn-primary pull-left m-button" type="submit" value = "editar"></input>	
+			        <button type="button" class="btn btn-default m-button" data-dismiss="modal">cerrar</button>
+	        </form>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+		<!-- ..............................	FIN DE EDITAR SYLLABUS  ............................ -->
 		<script src="{% static "jquery/dist/jquery.js" %}"></script>
 		<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+		<script src="{% static "js/cursos.js" %}"></script>
 	</footer>
 </body>
 </html>

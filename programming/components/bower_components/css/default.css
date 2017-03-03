@@ -1,0 +1,15 @@
+#back{
+	background-color: rgba(255,255,255,0.5);
+}
+
+body{
+	background-color: rgba(176, 190, 197, 0.5);
+}
+
+.m-button{
+	width: 48%;
+}
+
+.hide{
+	display:none;
+}

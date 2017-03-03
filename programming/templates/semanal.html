@@ -8,9 +8,62 @@
 	{% load static %}
 	<link href="{% static "bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">	
 	<link rel="stylesheet" type="text/css" href="{% static "css/custom-navbar.css" %}">
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+	<style type="text/css">
+		.admn{
+			margin: 0px;
+			padding: 0px;
+		}
+		.title{
+			border: solid green;
+			color: green;
+			background-color: rgba(0, 128, 0, 0.3);
+			max-width: 80%;
+			margin-bottom: 10px;
+			margin-left: 10%;
+		}
+		.title:hover{
+			border: solid green;
+			color: green;
+			background-color: rgba(0, 128, 0, 0.1);
+		}
+		.title:focus{
+			border: solid green;
+			color: green;
+		}
+		.container{
+			width: 100%;
+		}
+		.navbar-fixed-left {
+		  width: 140px;
+		  border-radius: 0;
+		  height: 100%;
+		  position: absolute;
+		  border-left: 0px;
+		}
+		.navi{
+			background-color: #222222;
+		}
+		.navbar-fixed-left .navbar-nav > li {
+		  float: none;  /* Cancel default li float: left */
+		  width: 139px;
+		}
 
+		.navbar-fixed-left + .container {
+		  padding-left: 160px;
+		}
+
+		.tab-pane { padding: 15px 0; }
+		.tab-content{
+			margin-left: 200px;
+			content: 900px;
+			}
+		.navbar-default{
+			margin-bottom: 0px;
+		}
+	</style>
 </head>
 <body>
 	<header>		
@@ -29,10 +82,10 @@
 		        	<li class="espol"><a href="/">Inicio</a></li>
 			        <li class="espol"><a href="/noticias">Noticias</a></li>
 			        <li class="espol"><a href="/cursos">Curso</a></li>
-			        <li class="espol"><a href="/semanal">semana a semana</a></li>
-			        <li class="espol"><a href="app/equipo/equipo.html">Equipo</a></li>
-			        <li class="espol"><a href="app/ayudantias/ayudantias.html">Ayudantías</a></li>
-			        <li class="espol"><a href="#">Sandbox</a></li>
+			        <li class="espol"><a href="/semanal">Semana a semana</a></li>
+			        <li class="espol"><a href="/equipo">Equipo</a></li>
+			        <li class="espol"><a href="/ayudantias">Ayudantías</a></li>
+			        <li class="espol"><a href="/rankings">Rankings</a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
 		        <li>
@@ -83,45 +136,105 @@
 		  </div>
 		</nav>
 	</header>
-<div class="container">
-	{% autoescape off %}
-	{%for clase in clases%}
-	<article class="articulo{{clase.id}}">
-		<button type="button" class="btn btn-link title{{clase.id}}" data-toggle="collapse" data-target=#{{clase.id}}>
-			{{clase.titulo}}
-		</button> 
-		<div id={{clase.id}} class="collapse">
-			<ul class="nav navbar-nav pull-right">
-					        <form action="/eliminarClase" method="post">
-					        	{% csrf_token %}
-					        	<input type="submit" class="btn btn-link" value="[Eliminar]">
-					        	<input type="text" name="id" value={{clase.id}} readonly>					        	
-					        </form>
-					        <input type="submit" class="btn btn-link edit" id="{{clase.id}}" value="[editar]">
-			</ul>
-			<p class="info{{clase.id}}">{{clase.descrpcion}}</p>
-			<div class="embed-responsive embed-responsive-16by9">
-			 	<iframe class="embed-responsive-item video{{clase.id}}" src="{{clase.video}}"></iframe>
+	<div class="conatiner">
+		<div class = "row">
+			<div class="col-md-11">
+					<div class="navbar navbar-inverse navbar-fixed-left" >
+				  <a class="navbar-brand" href="#home" data-toggle="tab" class="text-center">Clases</a>
+					<ul class="nav navbar-nav navi">
+						<li><a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="text-center">Inicio</a>
+					 	{% for clase in clases %}
+							<li><a href="#clase{{clase.id}}" aria-controls="class{{clase.id}}" role="tab" data-toggle="tab" class="text-center">{{clase.titulo}}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="home">
+							<article class="articulo{{clase.id}}">
+									<h3 class="title"></h3>
+									<h1>Inicio</h1>
+									<div>
+										<p>Some text here</p>
+										<p>and <strong>AWESOME</strong> text here</p>
+										<p>then just lorem ipsum</p>
+										<p>
+											Aliquam non posuere nibh, eu ultricies nunc. Donec rhoncus non ipsum quis venenatis. Praesent iaculis diam quam, non malesuada neque ullamcorper at. Integer viverra elementum mattis. Phasellus et ultricies dui. Sed ac sem tincidunt, pretium odio eget, faucibus nulla. Nunc tristique est at rutrum molestie. Vestibulum et posuere mi. Phasellus nec lobortis arcu, vel blandit turpis. Etiam mattis gravida varius. Suspendisse congue vulputate arcu, nec gravida nunc dictum id. Aliquam a sapien diam. Vestibulum vulputate pretium libero, a consectetur odio gravida eget. Aliquam posuere vitae augue at euismod.
+										</p>
+										<p>
+											Aenean consequat diam nisi, eget accumsan libero auctor vitae. Suspendisse ac mi id lectus consequat dignissim vel id odio. Nulla non mauris molestie risus dignissim consectetur. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec sed pellentesque ligula, sit amet condimentum sapien. Nullam maximus felis a feugiat vehicula. Phasellus a placerat libero. Pellentesque nec dictum nulla. Proin eu lobortis tellus. Maecenas eleifend purus volutpat ligula varius, vel dignissim tortor gravida. Maecenas elementum metus eros, nec gravida libero fringilla vel.
+										</p>
+										<p>
+											Aliquam at faucibus orci. Aliquam convallis libero sem, vitae aliquam nibh viverra non. Donec vel vulputate quam. Proin nec odio mollis, interdum felis vel, dapibus felis. Curabitur eu ligula nunc. Vivamus vitae ultricies est. Nunc dui dui, pellentesque in gravida lobortis, dignissim commodo dolor. Vivamus fringilla imperdiet dui, at placerat nisi blandit vitae. Aliquam sit amet ultrices leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ultricies risus et sem dignissim vehicula. Integer accumsan, leo ac efficitur volutpat, dolor mauris fringilla nisi, et ultrices ex metus sit amet neque. Quisque auctor enim sit amet metus pulvinar, in molestie lorem tincidunt. Vestibulum sed mi nec velit ultrices semper vel sed dui. Donec non mi congue, pharetra velit sit amet, gravida erat. Suspendisse sodales eros at massa hendrerit, quis tincidunt tellus eleifend.
+										</p>
+										<hr><hr>
+									</div>
+									<br>
+								</article>
+						</div>
+						{% for clase in clases %}
+							<div role="tabpanel" class="tab-pane" id="clase{{clase.id}}">
+								<article class="articulo{{clase.id}}">
+									<h3 class="title"></h3>
+									<h3 class="title{{clase.id}}">{{clase.titulo}}</h3>
+									<div id={{clase.id}}>
+										<ul class="nav navbar-nav pull-right">
+												        <form action="/eliminarClase" method="post">
+												        	{% csrf_token %}
+												        	<input type="submit" class="btn btn-link admn" value="[Eliminar]">
+												        	<input type="text" name="id" value={{clase.id}} readonly style="display:none;">					        	
+												        </form>
+												        <input type="submit" class="btn btn-link edit admn" id="{{clase.id}}" data-toggle="modal" data-target="#editModal" value="[editar]">
+										</ul>
+										<p class="info{{clase.id}} text-justify">{{clase.descrpcion|linebreaksbr}}</p>
+										<hr><hr>
+										<div class="embed-responsive embed-responsive-16by9">
+										 	<iframe class="embed-responsive-item video{{clase.id}}" src="{{clase.video}}"></iframe>
+										</div>
+									</div>
+									<br>
+								</article>
+							</div>
+						{% endfor %}
+				</div>
 			</div>
 		</div>
-		<br>
-	</article>
-	{%endfor%}
-	<br><hr><br>
-	<h2>¿Subir nuevo curso?</h2>
-	<form action = "/nueva_clase" method="post">
-			{% csrf_token %}
-			<p>Titulo</p>
-			<input type="text"  class="form-control" name="titulo"><br>
-			<p>Descripcion</p>
-			<textarea name="descripcion"  class="form-control" cols="40" rows="5"></textarea><br>
-			<p>url-video</p>
-			<input type="text" class="form-control" name="video"><br>
-			<input type="submit" class="btn btn-primary" value="submit">
-		</form>
-	{% endautoescape %}
-</div>
+	</div>
 	<footer>
+		<!-- ..............................MODAL DE EDITAR ............................ -->
+		<div id="editModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Editar Curso</h4>
+		      </div>
+		      <div class="modal-body">
+		      		<form action = "/edit_clase" method="post">
+				        <input class="form-control hide" name="identificador"  id="m-id" value="" readonly>
+				        <h4 class="modal-title">Titulo</h4>
+				        <input class="form-control" name="titulo" value = "" id="m-title">
+				        <hr>
+				        <h4 class="modal-title">Descripcion</h4>
+				        <textarea class="form-control" name="descripcion" cols = "40" rows="5" id="m-desc"></textarea>
+				        <hr><hr>
+				        <h4 class="modal-title">Video</h4>
+				        <input class="form-control" name="video" value = "" id="m-video">
+			        
+		      </div>
+		      <div class="modal-footer">
+				      	<input class = "btn btn-primary pull-left m-button" type="submit" value = "editar"></input>	
+				        <button type="button" class="btn btn-default m-button" data-dismiss="modal">cerrar</button>
+		        </form>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+		<!-- ..............................	FIN DE EDITAR ............................ -->
+
 		<script src="{% static "jquery/dist/jquery.js" %}"></script>
 		<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
 		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>

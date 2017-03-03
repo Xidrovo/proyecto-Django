@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Rankings</title>
+	{% load static %}
+	<link href="{% static "bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">	
+	<link rel="stylesheet" type="text/css" href="{% static "css/custom-navbar.css" %}">
+	<style type="text/css">
+		.rank{
+			width: 25%;
+			margin-left: 8%;
+			padding-bottom: 5%;
+		   	box-shadow: 5px 10px 5px grey;
+		}
+		.fuerte{
+			font-weight: bold;
+		}
+		.photo{
+			border-radius: 100%;
+		}
+		.rank{
+			background-color: rgba(176, 190, 197, 0.8);
+			border-radius: 50px;
+			padding-top:5px;
+		}
+		.tit{
+			margin-bottom: 20px;
+			margin-top: 20px;
+			font-size: 3em;
+		}
+		body{
+			background-color: rgba(176, 190, 197, 0.5);
+		}
+		p{
+			line-height: 15px;
+		}
+		img{
+			margin-bottom: 10px;
+		}
+		.sec{
+			margin-bottom: 50px;
+		}
+		.stud2, .stud0{
+			top: 35px;
+		}
+		.stud1{
+			background-color: rgba(161, 127, 26,0.5);
+		}
+		.stud0{
+			background-color: rgba(211,211,211,0.5);
+		}
+		.stud2{
+			background-color: rgba(205, 127, 50, 0.5);
+		}
+		.gold{
+			font-size: 200%;
+			margin-top: 15%;
+			font-weight: bold;
+			content:url("{% static "img/ranks/gold.png" %}");
+			width: 128px;
+			height: 128px;
+			margin: 0 auto;
+		}
+		.silver{
+			font-size: 200%;
+			margin-top: 15%;
+			font-weight: bold;
+			content:url("{% static "img/ranks/Silver.png" %}");
+			width: 128px;
+			height: 128px;
+			margin: 0 auto;
+			padding-bottom: 0px;
+		}
+		.bronze{
+			font-size: 200%;
+			margin-top: 15%;
+			font-weight: bold;
+			content:url("{% static "img/ranks/bronce.png" %}");
+			width: 128px;
+			height: 128px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<header>		
+		<nav class="navbar navbar-default navbar-static-top">
+		  	<div class="container-fluid">
+		    	<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>                        
+			      	</button>
+		      		<a class="navbar-brand" href="/">ESPOL</a>
+		    	</div>
+		    	<div class="collapse navbar-collapse" id="myNavbar">
+			      	<ul class="nav navbar-nav">
+				        <li class="espol"><a href="/">Inicio</a></li>
+				        <li class="espol"><a href="/noticias">Noticias</a></li>
+				        <li class="espol"><a href="/cursos">Curso</a></li>
+				        <li class="espol"><a href="/semanal">Semana a semana</a></li>
+				        <li class="espol"><a href="/equipo">Equipo</a></li>
+				        <li class="espol"><a href="/ayudantias">Ayudantías</a></li>
+				        <li class="espol"><a href="/rankings">Rankings</a></li>
+			      	</ul>
+			      	<ul class="nav navbar-nav navbar-right">
+		        		<li>
+		        			<button class="btn btn-info"  data-toggle="modal" data-target="#myModal">
+					    		<img src="../../public/media/img/no-Avatar.jpg" id="login" />
+							</button>
+		        		</li>
+		      		</ul>
+				</div>
+					<!--Fin de la creación del modal-->
+		    </div>
+		  </div>
+		</nav>
+	</header>
+	<h1 class="text-center">Rankings</h1>
+	<div class="container">
+		
+	</div>
+	<footer>
+		<script src="{% static "jquery/dist/jquery.js" %}"></script>
+		<script src="{% static "bootstrap/dist/js/bootstrap.js" %}"></script>
+		<script src="{% static "js/rankings.js" %}"></script>
+	</footer>
+</body>
+</html>
