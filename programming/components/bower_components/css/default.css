@@ -8,6 +8,7 @@ body{
 
 .m-button{
 	width: 48%;
+	border-style: none;
 }
 
 .hide{
